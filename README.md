@@ -1,10 +1,16 @@
 # Tutorial básico de Arduino
 
-* [Cosas básicas](#basico)
+* [Primeros pasos](#basico)
+* [Blink](#tst_blink)
+* [Jugando con LEDs](#tst_blink_variaciones)
+* [Pulsadores](#tst_pulsadores)
+* [Jugando con pulsadores](#tst_pulsadores_ejemplo)
+* [Buzzers](#tst_buzzer)
+* [Órgano de juguete](#organo)
 * [Motores de continua](#motoresDC)
 
 
-## <a name="basico"></a>Cosas básicas
+## <a name="basico"></a>Primeros pasos
 
 1. Comprar arduino. ¿Dónde? En amazon se pueden encontrar muchos kits. La
    marca ELEGOO parece ser buena marca y un poco más barata que la marca
@@ -34,6 +40,60 @@
     Después de cargar el programa podrás ver que uno de los LEDs del Arduino
     parpadea. ¡Ha funcionado! 
 
+
+
+## <a name="tst_blink"></a>Blink
+1. El programa `blink` lo que hace es enciende un LED durante 1 segundo (= 1000
+   ms), luego lo apaga durante 1 segundo (= 1000 ms) y volviendo a empezar.
+
+   La parte que controla el tiempo de encendido/apagado es `delay(1000)`. Esta
+   función le indica el microcontralador que no haga nada (que espere) durante
+   1000 ms. Prueba a cambiar el tiempo que está encendido. En lugar de 1000 ms
+   pon 2000 ms; ó 500 ms. ¿qué pasa si enciendes y apagas el led durante 10
+   ms?
+
+2. Explicación del programa.
+
+3. El LED que estamos encendiendo es muy pequeño y apenas se ve. Encendamos un
+   LED más grande: conecta al pin 13 (el pin del LED que estás encendiendo) a
+   un LED normal.
+
+
+## <a name="tst_blink_variaciones"></a>Jugando con LEDs
+
+Posibles programas que se pueden hacer:
+
+* Hacer el efecto del [coche
+  fantástico](https://www.youtube.com/watch?v=c4M-GAS4cWE)
+
+* Hacer un semáforo.
+
+
+## <a name="tst_pulsadores"></a>Pulsadores
+
+1. Electrónica: para ver cómo funciona un pulsador hacer un circuito que
+   encienda o apague un LED al pulsarlo.
+
+2. Repetir el mismo circuito pero esta vez usando Arduino.
+
+
+## <a name="tst_pulsadores_ejemplo"></a>Jugando con pulsadores
+
+* Conectar varios pulsadores, cada uno que represente una nota musical (Do,
+  Re, Mi, ...) y que al pulsarlos se muestre en el "monitor serial" del IDE
+  de Arduino la tecla pulsada.
+
+## <a name="tst_buzzer"></a>Buzzers
+
+1. Generar la nota La al presionar un pulsador. 
+2. Para entender bien lo que se está haciendo grabar el sonido emitido por un
+   diapasón de 440Hz (La) y mostrarlo en el ordenador usando Audacity.
+   ¿Reconoces la forma de la función?
+
+## <a name="organo"></a>Organo de juguete
+
+* Fabricar un organo de juguete: no son más que unos cuantos pulsadores 
+  y un buzzer.
 
 
 
