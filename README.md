@@ -54,7 +54,9 @@
 
 2. Explicación del programa.
 
-3. El LED que estamos encendiendo es muy pequeño y apenas se ve. Encendamos un
+3. Electrónica: hacer un circuito muy básico que encienda un LED.
+
+4. El LED que estamos encendiendo es muy pequeño y apenas se ve. Encendamos un
    LED más grande: conecta al pin 13 (el pin del LED que estás encendiendo) a
    un LED normal.
 
