@@ -108,3 +108,35 @@ Posibles programas que se pueden hacer:
     * [Ejemplo](https://www.instructables.com/L298N-MOTOR-DRIVER-MODULE/) 
 
 
+## <a name="cocheBasico"></a>Coche básico v1
+
+* Fabricar un coche de juguete. Estará conectado por cable a un mando. El
+  mando pueden ser 4 botones (adelante, atrás, izquierda y derecha) o un
+  volante. Posibilidad de ponerle botón de encendido/parado.
+
+  Método para fabricarlo: 
+
+  Uno de los errores típicos al empezar es intentar hacerlo todo de golpe. Hay
+  que ir poco a poco probando cada cosa que se vaya haciendo. Por eso te
+  propongo que hagas:
+
+  1. Construye un teclado conectado a la consola del Arduino. Al pulsar las
+     teclas deberá aparecer en pantalla: arriba, abajo, izquierda y derecha,
+     dependiendo de la tecla pulsada.
+
+  2. Programa los motores: cuando pulsas arriba los motores giran hacia
+     adelante; si pulsas abajo hacia atrás. De momento lo limitamos a
+     adelante/atrás.
+
+  3. Fabrica el coche. ¿Qué usar de plataforma dónde colocar los motores, el
+     arduino, las pilas...? ¿La hacemos de cartón? ¿palillos pegados? ¿panel?
+     ¿Y las ruedas? ¿cartón? ¿Tapones de garrafas?
+ 
+  4. Pruébalo. Si hay errores, corrígelos.
+
+  5. Añade que el coche pueda girar a la derecha y a la izquierda. Haz
+     experimentos. Prueba a girar una rueda en un sentido y otra en el otro:
+     ¿cómo se mueve el coche?
+
+
+
