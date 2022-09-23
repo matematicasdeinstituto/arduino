@@ -103,5 +103,8 @@ Posibles programas que se pueden hacer:
 ## <a name="motoresDC"></a>Motores de continua
 
 * Driver L298N: 
-    [características](https://components101.com/modules/l293n-motor-driver-module)
-    [ejemplo](doc/L298N.pdf)
+    * [Características](https://components101.com/modules/l293n-motor-driver-module)
+    * [Datasheet](doc/L298_datasheet.pdf)
+    * [Ejemplo](https://www.instructables.com/L298N-MOTOR-DRIVER-MODULE/) 
+
+
