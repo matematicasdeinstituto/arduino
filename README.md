@@ -12,9 +12,10 @@
     * [Órgano de juguete](#organo)
 
 * [Motores de continua](#motoresDC)
-    * [Coche básico v1](#cocheBasico)
+    * Coche básico: [v1.0](#cocheBasico10)
+		    [v1.1](#cocheBasico11)
 
-* [Material](#material)
+* [Material](#tagmaterial)
 
 
 ## <a name="basico"></a>Primeros pasos
@@ -145,7 +146,7 @@ y un buzzer.
     * [Datasheet](doc/L298_datasheet.pdf)
     * [Ejemplo](https://www.instructables.com/L298N-MOTOR-DRIVER-MODULE/) 
 
-### <a name="cocheBasico"></a>Coche básico v1.0
+### <a name="cocheBasico10"></a>Coche básico v1.0
 Fabricar un coche de juguete. Es un coche completamente tonto. Se limita a ir
 1 segundo hacia adelante, parar 1 segundo, ir 1 segundo hacia atrás, parar y
 volver a empezar.
@@ -168,7 +169,7 @@ arduino, los L298N, pero no tenemos ruedas ni un soporte para montarlo.
 
 * ¿Y las ruedas? ¿cartón? ¿Tapones de garrafas?
 
-### <a name="cocheBasico"></a>Coche básico v1.1
+### <a name="cocheBasico11"></a>Coche básico v1.1
 
 Fabricar un coche de juguete. Estará conectado por cable a un mando. El
 mando pueden ser 4 botones (adelante, atrás, izquierda y derecha) o un
@@ -199,7 +200,7 @@ volante. Posibilidad de ponerle botón de encendido/parado.
      ¿cómo se mueve el coche?
 
 
-## <a name="material"></a>Material para realizar las actividades
+## <a name="tagmaterial"></a>Material para realizar las actividades
 * 8 LEDs rojos
 * 1 LED amarillo
 * 1 LED verde
