@@ -2,13 +2,19 @@
 
 * [Primeros pasos](#basico)
 * [Blink](#tst_blink)
-* [Jugando con LEDs](#tst_blink_variaciones)
+    * [Coche fantástico (efecto de LEDs)](#cocheFantastico)
+    * [Semáforo](#semaforo)
+
 * [Pulsadores](#tst_pulsadores)
-* [Jugando con pulsadores](#tst_pulsadores_ejemplo)
+    * [Teclado de un órgano](#tecladoOrgano)
+
 * [Buzzers](#tst_buzzer)
-* [Órgano de juguete](#organo)
+    * [Órgano de juguete](#organo)
+
 * [Motores de continua](#motoresDC)
-* [Coche básico v1](#cocheBasico)
+    * [Coche básico v1](#cocheBasico)
+
+* [Material](#material)
 
 
 ## <a name="basico"></a>Primeros pasos
@@ -43,7 +49,14 @@
 
 
 
-## <a name="tst_blink"></a>Blink
+### <a name="tst_blink"></a>Blink
+#### Material
+* 1 LED
+* 1 resistencia 1K (la típica suele ser de 330 ohms)
+* Cables
+
+
+#### Actividad
 1. El programa `blink` lo que hace es enciende un LED durante 1 segundo (= 1000
    ms), luego lo apaga durante 1 segundo (= 1000 ms) y volviendo a empezar.
 
@@ -62,14 +75,27 @@
    un LED normal.
 
 
-## <a name="tst_blink_variaciones"></a>Jugando con LEDs
+### <a name="cocheFantastico"></a>Coche fántastico
 
-Posibles programas que se pueden hacer:
-
-* Hacer el efecto del [coche
+Hacer el efecto del [coche
   fantástico](https://www.youtube.com/watch?v=c4M-GAS4cWE)
 
-* Hacer un semáforo.
+
+#### Material
+* 6-8 LEDs
+* 6-8 resistencias de 1k
+* cables
+
+
+### <a name="semaforo"></a>Semáforo
+Hacer un semáforo.
+
+#### Material
+* 1 LED rojo
+* 1 LED amarillo
+* 1 LED verde
+* 3 resistencias 1k
+* cables
 
 
 ## <a name="tst_pulsadores"></a>Pulsadores
@@ -80,11 +106,17 @@ Posibles programas que se pueden hacer:
 2. Repetir el mismo circuito pero esta vez usando Arduino.
 
 
-## <a name="tst_pulsadores_ejemplo"></a>Jugando con pulsadores
+### <a name="tecladoOrgano"></a>Teclado órgano
 
-* Conectar varios pulsadores, cada uno que represente una nota musical (Do,
-  Re, Mi, ...) y que al pulsarlos se muestre en el "monitor serial" del IDE
-  de Arduino la tecla pulsada.
+Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
+pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
+pulsadas.
+
+#### Material
+* 7 pulsadores
+* Opcional: 7 resistencias de 1k
+* cables
+
 
 ## <a name="tst_buzzer"></a>Buzzers
 
@@ -93,11 +125,16 @@ Posibles programas que se pueden hacer:
    diapasón de 440Hz (La) y mostrarlo en el ordenador usando Audacity.
    ¿Reconoces la forma de la función?
 
-## <a name="organo"></a>Organo de juguete
+### <a name="organo"></a>Órgano de juguete
 
-* Fabricar un organo de juguete: no son más que unos cuantos pulsadores 
-  y un buzzer.
+Fabricar un organo de juguete: no son más que unos cuantos pulsadores 
+y un buzzer.
 
+#### Material
+* 7 pulsadores
+* 1 buzzer
+* Opcional: resistencias de 1k
+* cables
 
 
 
@@ -108,14 +145,39 @@ Posibles programas que se pueden hacer:
     * [Datasheet](doc/L298_datasheet.pdf)
     * [Ejemplo](https://www.instructables.com/L298N-MOTOR-DRIVER-MODULE/) 
 
+### <a name="cocheBasico"></a>Coche básico v1.0
+Fabricar un coche de juguete. Es un coche completamente tonto. Se limita a ir
+1 segundo hacia adelante, parar 1 segundo, ir 1 segundo hacia atrás, parar y
+volver a empezar.
 
-## <a name="cocheBasico"></a>Coche básico v1
+#### Material
+* 4 motores
+* 4 ruedas (¿tapones? ¿de cartón? ¿compradas?)
+* 2 L298N
+* Soporte para montarlo (¿cómo fabricarlo? Como quieras)
+* Batería de 6V (?)
+* Cables
 
-* Fabricar un coche de juguete. Estará conectado por cable a un mando. El
-  mando pueden ser 4 botones (adelante, atrás, izquierda y derecha) o un
-  volante. Posibilidad de ponerle botón de encendido/parado.
+#### Actividad
+El problema de esta actividad es cómo fabricar el coche. Tenemos motores,
+arduino, los L298N, pero no tenemos ruedas ni un soporte para montarlo.
 
-  Método para fabricarlo: 
+* ¿Qué usar de plataforma dónde colocar los motores, el
+ arduino, las pilas...? ¿La hacemos de cartón? ¿palillos pegados? ¿panel?
+ ¿lo metemos en una caja?
+
+* ¿Y las ruedas? ¿cartón? ¿Tapones de garrafas?
+
+### <a name="cocheBasico"></a>Coche básico v1.1
+
+Fabricar un coche de juguete. Estará conectado por cable a un mando. El
+mando pueden ser 4 botones (adelante, atrás, izquierda y derecha) o un
+volante. Posibilidad de ponerle botón de encendido/parado.
+
+#### Material
+* Mismo que en v1.0
+
+#### Método para fabricarlo
 
   Uno de los errores típicos al empezar es intentar hacerlo todo de golpe. Hay
   que ir poco a poco probando cada cosa que se vaya haciendo. Por eso te
@@ -129,9 +191,6 @@ Posibles programas que se pueden hacer:
      adelante; si pulsas abajo hacia atrás. De momento lo limitamos a
      adelante/atrás.
 
-  3. Fabrica el coche. ¿Qué usar de plataforma dónde colocar los motores, el
-     arduino, las pilas...? ¿La hacemos de cartón? ¿palillos pegados? ¿panel?
-     ¿Y las ruedas? ¿cartón? ¿Tapones de garrafas?
  
   4. Pruébalo. Si hay errores, corrígelos.
 
@@ -140,4 +199,15 @@ Posibles programas que se pueden hacer:
      ¿cómo se mueve el coche?
 
 
-
+## <a name="material"></a>Material para realizar las actividades
+* 8 LEDs rojos
+* 1 LED amarillo
+* 1 LED verde
+* 8 resistencia 1k
+* 7 pulsadores
+* 1 buzzer
+* 2 L298N
+* Batería de 6V (?)
+* Cables
+* Palillos, cartón, tapones... lo que se necesite para hacer las ruedas y el
+  soporte del coche.
