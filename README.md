@@ -210,7 +210,12 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 * 7 pulsadores
 * 1 buzzer
 * 2 L298N
+* 4 motores DC con reducción (que sean fáciles de montar)
 * Batería de 6V (?)
 * Cables
 * Palillos, cartón, tapones... lo que se necesite para hacer las ruedas y el
   soporte del coche.
+
+### Material opcional
+* 4 ruedas
+
