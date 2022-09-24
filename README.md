@@ -201,6 +201,8 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 
 
 ## <a name="tagmaterial"></a>Material para realizar las actividades
+* 1 arduino
+* 1 breadboard
 * 8 LEDs rojos
 * 1 LED amarillo
 * 1 LED verde
