@@ -24,7 +24,7 @@
 
 
 * [Reflective Optical Sensor](#sensorOptico)
-    * Coche v4.0: [seguidor de línea](#cochev30)
+    * Coche v4.0: [seguidor de línea](#cochev40)
 
 * [Material](#tagmaterial)
 
