@@ -15,6 +15,10 @@
     * Coche básico: [v1.0](#cocheBasico10)
 		    [v1.1](#cocheBasico11)
 
+* [Mandos a distancia](#recepcionIR)
+    * [Coche básico  v2](#cocheBasico20)
+
+
 * [Material](#tagmaterial)
 
 
@@ -200,6 +204,21 @@ volante. Posibilidad de ponerle botón de encendido/parado.
      ¿cómo se mueve el coche?
 
 
+
+## <a name="recepcionIR"></a>Mandos a distancia
+* Receptor de IR: aprender a recibir las señales de un mando a distancia.
+
+
+### <a name="cocheBasico20"></a>Coche básico v2
+Hacer que el coche de v1.1 se controle con un mando a distancia.
+
+#### Material
+* Mismo que v1.1
+* Receptor IR
+* Mando a distancia
+
+
+
 ## <a name="tagmaterial"></a>Material para realizar las actividades
 * 1 arduino
 * 1 breadboard
@@ -209,8 +228,10 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 * 8 resistencia 1k
 * 7 pulsadores
 * 1 buzzer
-* 2 L298N
+* 2 L298N (ó 1 solo si se hace el coche con 3 ruedas)
 * 4 motores DC con reducción (que sean fáciles de montar)
+* Receptor de infrarrojos (38kHz)
+* Mando a distancia (puede ser el de la TV)
 * Batería de 6V (?)
 * Cables
 * Palillos, cartón, tapones... lo que se necesite para hacer las ruedas y el
