@@ -16,8 +16,15 @@
 		    [v1.1](#cocheBasico11)
 
 * [Mandos a distancia](#recepcionIR)
-    * [Coche básico  v2](#cocheBasico20)
+    * Coche básico [v2.0](#cocheBasico20)
 
+* [Sensor de ultrasonidos](#sensorUltrasonidos)
+    * [Metro de "ultrasonidos"](#metroUltrasonidos)
+    * Coche v3.0: [con sensor ultrasonidos](#cochev30)
+
+
+* [Reflective Optical Sensor](#sensorOptico)
+    * Coche v4.0: [seguidor de línea](#cochev30)
 
 * [Material](#tagmaterial)
 
@@ -209,14 +216,49 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 * Receptor de IR: aprender a recibir las señales de un mando a distancia.
 
 
-### <a name="cocheBasico20"></a>Coche básico v2
+### <a name="cocheBasico20"></a>Coche básico v2.0
 Hacer que el coche de v1.1 se controle con un mando a distancia.
 
-#### Material
-* Mismo que v1.1
-* Receptor IR
-* Mando a distancia
 
+## <a name="sensorUltrasonidos"></a>Sensor de ultrasonidos
+* HC-SR04
+
+### <a name="metroUltrasonidos"></a>Metro de "ultrasonidos"
+Hacer un "metro" que permita medir la distancia hasta la pared, techo, ...,
+usando ultrasonidos. La distancia la muestra en el monitor serie.
+
+#### Material
+* HC-SR04
+* Cables
+
+
+### <a name="cochev30"></a>Coche v3.0: con sensor ultrasonidos
+Añadirle a la versión 2 del coche un sensor de ultrasonidos. Programarlo para
+que el coche sea automático: se mueva hacia adelante hasta encontrar una
+pared. En ese momento gira, cambia la dirección y va a otro sitio.
+
+RETO: ¿Puedes programarlo para que sea capaz de salir de un laberinto? Videos
+ejemplos: [01](https://www.youtube.com/watch?v=ZFO2q83cBfY) 
+	  [02](https://www.youtube.com/watch?v=018CSojYI8Y)
+
+
+#### Material
+* Mismo que v2
+* HC-SR04
+
+
+### <a name="sensorOptico"></a>Reflective Optical Sensor
+* CNY70 
+
+
+### <a name="cochev40"></a>Coche v4.0: seguidor de línea
+Añadirle a la v3 un sensor (ó más de uno) para poder hacer un coche seguidor
+de línea. [Aquí](https://www.youtube.com/watch?v=db6oKIfeocs) tienes un
+ejemplo de cómo funcionan.
+
+#### Material
+* Mismo que v3
+* 1-3 sensor CNY70
 
 
 ## <a name="tagmaterial"></a>Material para realizar las actividades
@@ -230,9 +272,11 @@ Hacer que el coche de v1.1 se controle con un mando a distancia.
 * 1 buzzer
 * 2 L298N (ó 1 solo si se hace el coche con 3 ruedas)
 * 4 motores DC con reducción (que sean fáciles de montar)
+* Batería de 6V (?)
 * Receptor de infrarrojos (38kHz)
 * Mando a distancia (puede ser el de la TV)
-* Batería de 6V (?)
+* HC-SR04 sensor de ultrasonidos
+* 1-3 sensor CNY70
 * Cables
 * Palillos, cartón, tapones... lo que se necesite para hacer las ruedas y el
   soporte del coche.
