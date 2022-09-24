@@ -284,3 +284,11 @@ ejemplo de cómo funcionan.
 ### Material opcional
 * 4 ruedas
 
+## <a name="tagConcursos"></a>Concursos
+Para cotillear:
+* Eurobot: 
+    [página España](https://www.eurobot.es/index.php/eurobot-jr)
+    [página internacional](https://www.eurobot.org/eurobot-junior/)
+
+    Plazo de inscripción: hasta finales de diciembre.
+
