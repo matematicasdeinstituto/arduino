@@ -3,13 +3,16 @@
 * [Primeros pasos](#basico)
 * [Blink](#tst_blink)
     * [Coche fantástico (efecto de LEDs)](#cocheFantastico)
-    * [Semáforo](#semaforo)
+    * [Semáforo básico](#semaforo)
 
 * [Pulsadores](#tst_pulsadores)
     * [Teclado de un órgano](#tecladoOrgano)
+    * [Midiendo tiempo de reacción](#tiempoReaccion)
+    * [Semáforo de peatones](#semaforoPeatones)
 
 * [Buzzers](#tst_buzzer)
     * [Órgano de juguete](#organo)
+    * [Sirena](#sirenaBuzzer)
 
 * [Motores de continua](#motoresDC)
     * Coche básico: [v1.0](#cocheBasico10)
@@ -18,15 +21,22 @@
 * [Mandos a distancia](#recepcionIR)
     * Coche básico [v2.0](#cocheBasico20)
 
+* [Servo motor](#motorServo)
+
 * [Sensor de ultrasonidos](#sensorUltrasonidos)
     * [Metro de "ultrasonidos"](#metroUltrasonidos)
+    * [Semáforo de peatones automático](#semaforoPeatonesAutomatico)
     * Coche v3.0: [con sensor ultrasonidos](#cochev30)
 
 
 * [Reflective Optical Sensor](#sensorOptico)
     * Coche v4.0: [seguidor de línea](#cochev40)
 
+* [PWM: controlando la velocidad de un motor DC](#pwmMotorDC)
+
 * [Material](#tagmaterial)
+
+* [Concursos](#tagConcursos)
 
 
 ## <a name="basico"></a>Primeros pasos
@@ -129,6 +139,30 @@ pulsadas.
 * Opcional: 7 resistencias de 1k
 * cables
 
+### <a name="tiempoReaccion"></a>Midiendo tiempo de reacción
+Haz un circuito para medir el tiempo de reacción de una persona. Se puede
+hacer de varias formas: pones 3 leds y que vayan cambiando de color
+alternativamente. De repente se encienden todos: pulsa un botón. Mide el
+tiempo que tarda en reaccionar la persona mostrándolo en el monitor serie.
+
+### Material
+* 3 LEDs 
+* 3 resistencias 1k
+* 1 pulsador
+
+### <a name="semaforoPeatones"></a>Semáforo de peatones
+En una calle hay un paso de cebra regulado por un semáforo. El semáforo
+siempre está verde para los coches excepto cuando llega un peaton y pulsa un
+botón, en cuyo caso el semáforo de coches se pone rojo (pasa primero por
+amarillo) y el de peatones se pone verde. Transcurrido un tiempo el semáforo
+de peatones se pone rojo y el de coches verde.
+
+### Material
+* 2 LEDs rojos
+* 2 LEDs verdes
+* 1 LED amarillo
+* 5 resistencias 1k
+* 1 pulsador
 
 ## <a name="tst_buzzer"></a>Buzzers
 
@@ -148,6 +182,13 @@ y un buzzer.
 * Opcional: resistencias de 1k
 * cables
 
+### <a name="sirenaBuzzer"></a>Sirena
+¿Puedes hacer que el buzzer emita el sonido de una sirena de policía? ¿o de
+los bomberos? ¿o reproducir la alarma de un despertador?
+
+#### Material
+* 1 buzzer
+* cables
 
 
 ## <a name="motoresDC"></a>Motores de continua
@@ -219,6 +260,8 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 ### <a name="cocheBasico20"></a>Coche básico v2.0
 Hacer que el coche de v1.1 se controle con un mando a distancia.
 
+## <a name="motorServo"></a>Servo motor
+* servo motor
 
 ## <a name="sensorUltrasonidos"></a>Sensor de ultrasonidos
 * HC-SR04
@@ -231,6 +274,23 @@ usando ultrasonidos. La distancia la muestra en el monitor serie.
 * HC-SR04
 * Cables
 
+### <a name="semaforoPeatonesAutomatico"></a>Semáforo de peatones automático
+Este semáforo es igual al semáforo de peatones salvo que en lugar de que el
+peaton tenga que pulsar un botón, el semáforo se pone en verde automáticamente
+para los peatones cuando detecta que se acerca uno. 
+
+En caso de que llegasen peatones de forma continua ten cuidado no dejes el
+semáforo en rojo para los coches continuamente. Transcurrido un tiempo tendrá
+que ponerse en verde para que pasen los coches, luego en rojo para que pasen
+los peatones que hayan llegado, ...
+
+### Material
+* 2 LEDs rojos
+* 2 LEDs verdes
+* 1 LED amarillo
+* 5 resistencias 1k
+* HC-SR04
+* cables
 
 ### <a name="cochev30"></a>Coche v3.0: con sensor ultrasonidos
 Añadirle a la versión 2 del coche un sensor de ultrasonidos. Programarlo para
@@ -260,18 +320,22 @@ ejemplo de cómo funcionan.
 * Mismo que v3
 * 1-3 sensor CNY70
 
+## <a name="pwmMotorDC"></a>PWM: controlando la velocidad de un motor DC
+
+
 
 ## <a name="tagmaterial"></a>Material para realizar las actividades
 * 1 arduino
 * 1 breadboard
 * 8 LEDs rojos
 * 1 LED amarillo
-* 1 LED verde
+* 2 LED verdes
 * 8 resistencia 1k
 * 7 pulsadores
 * 1 buzzer
 * 2 L298N (ó 1 solo si se hace el coche con 3 ruedas)
 * 4 motores DC con reducción (que sean fáciles de montar)
+* 1 servo motor
 * Batería de 6V (?)
 * Receptor de infrarrojos (38kHz)
 * Mando a distancia (puede ser el de la TV)
