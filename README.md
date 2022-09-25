@@ -2,6 +2,8 @@
 
 * [Primeros pasos](#basico)
 * [Blink](#tst_blink)
+
+* [Primer programa: Hola, mundo!](#holaMundo)
     * [Coche fantástico (efecto de LEDs)](#cocheFantastico)
     * [Semáforo básico](#semaforo)
 
@@ -95,6 +97,20 @@
 4. El LED que estamos encendiendo es muy pequeño y apenas se ve. Encendamos un
    LED más grande: conecta al pin 13 (el pin del LED que estás encendiendo) a
    un LED normal.
+
+## <a name="holaMundo"></a>Primer programa: hola, mundo!
+El primer programa que se aprende al aprender C++ es imprimir "Hola, mundo!"
+en pantalla. Veamos cómo hacerlo. 
+
+IMPORTANTE: El lenguaje de programación que usa Arduino es C++. Sin embargo,
+por motivos que desconozco, el estilo de programación de los ejemplos que se
+encuentran en internet es un C++ obsoleto. Por ello voy siempre a suministrar
+mínimo 2 ejemplos: uno escrito al estilo de los ejemplos encontrados en
+internet; otro escrito en C++ moderno. 
+
+* [Versión arduino](src/arduino/hola_mundo)
+* Versión C++: [v1](src/cpp/hola_mundo) 
+	       [v2](src/cpp/hola_mundo_v2)
 
 
 ### <a name="cocheFantastico"></a>Coche fántastico
