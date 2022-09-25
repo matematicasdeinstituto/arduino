@@ -74,7 +74,7 @@
 
 
 
-### <a name="tst_blink"></a>Blink
+### <a name="tst_blink"></a>Ejercicio: Blink
 #### Material
 * 1 LED
 * 1 resistencia 1K (la típica suele ser de 330 ohms)
@@ -123,7 +123,7 @@ internet; otro escrito en C++ moderno.
   Usamos bucles `for` para simplificar el código.
 
 
-### <a name="efectoLEDs"></a>Efecto de LEDs
+### <a name="efectoLEDs"></a>Ejercicio: Efecto de LEDs
 Prueba a jugar con los LEDs haciendo diferentes efectos. 
 
 Posibilidades:
@@ -147,7 +147,7 @@ Posibilidades:
 * cables
 
 
-### <a name="semaforo"></a>Semáforo
+### <a name="semaforo"></a>Ejercicio: Semáforo
 Hacer un semáforo.
 
 #### Material
@@ -166,7 +166,7 @@ Hacer un semáforo.
 2. Repetir el mismo circuito pero esta vez usando Arduino.
 
 
-### <a name="tecladoOrgano"></a>Teclado órgano
+### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
 
 Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
 pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
@@ -177,7 +177,7 @@ pulsadas.
 * Opcional: 7 resistencias de 1k
 * cables
 
-### <a name="tiempoReaccion"></a>Midiendo tiempo de reacción
+### <a name="tiempoReaccion"></a>Ejercicio: Midiendo tiempo de reacción
 Haz un circuito para medir el tiempo de reacción de una persona. Se puede
 hacer de varias formas: pones 3 leds y que vayan cambiando de color
 alternativamente. De repente se encienden todos: pulsa un botón. Mide el
@@ -188,7 +188,7 @@ tiempo que tarda en reaccionar la persona mostrándolo en el monitor serie.
 * 3 resistencias 1k
 * 1 pulsador
 
-### <a name="semaforoPeatones"></a>Semáforo de peatones
+### <a name="semaforoPeatones"></a>Ejercicio: Semáforo de peatones
 En una calle hay un paso de cebra regulado por un semáforo. El semáforo
 siempre está verde para los coches excepto cuando llega un peaton y pulsa un
 botón, en cuyo caso el semáforo de coches se pone rojo (pasa primero por
@@ -209,7 +209,7 @@ de peatones se pone rojo y el de coches verde.
    diapasón de 440Hz (La) y mostrarlo en el ordenador usando Audacity.
    ¿Reconoces la forma de la función?
 
-### <a name="organo"></a>Órgano de juguete
+### <a name="organo"></a>Ejercicio: Órgano de juguete
 
 Fabricar un organo de juguete: no son más que unos cuantos pulsadores 
 y un buzzer.
@@ -220,7 +220,7 @@ y un buzzer.
 * Opcional: resistencias de 1k
 * cables
 
-### <a name="sirenaBuzzer"></a>Sirena
+### <a name="sirenaBuzzer"></a>Ejercicio: Sirena
 ¿Puedes hacer que el buzzer emita el sonido de una sirena de policía? ¿o de
 los bomberos? ¿o reproducir la alarma de un despertador?
 
@@ -236,7 +236,7 @@ los bomberos? ¿o reproducir la alarma de un despertador?
     * [Datasheet](doc/L298_datasheet.pdf)
     * [Ejemplo](https://www.instructables.com/L298N-MOTOR-DRIVER-MODULE/) 
 
-### <a name="cocheBasico10"></a>Coche básico v1.0
+### <a name="cocheBasico10"></a>Ejercicio: Coche básico v1.0
 Fabricar un coche de juguete. Es un coche completamente tonto. Se limita a ir
 1 segundo hacia adelante, parar 1 segundo, ir 1 segundo hacia atrás, parar y
 volver a empezar.
@@ -259,7 +259,7 @@ arduino, los L298N, pero no tenemos ruedas ni un soporte para montarlo.
 
 * ¿Y las ruedas? ¿cartón? ¿Tapones de garrafas?
 
-### <a name="cocheBasico11"></a>Coche básico v1.1
+### <a name="cocheBasico11"></a>Ejercicio: Coche básico v1.1
 
 Fabricar un coche de juguete. Estará conectado por cable a un mando. El
 mando pueden ser 4 botones (adelante, atrás, izquierda y derecha) o un
@@ -295,7 +295,7 @@ volante. Posibilidad de ponerle botón de encendido/parado.
 * Receptor de IR: aprender a recibir las señales de un mando a distancia.
 
 
-### <a name="cocheBasico20"></a>Coche básico v2.0
+### <a name="cocheBasico20"></a>Ejercicio: Coche básico v2.0
 Hacer que el coche de v1.1 se controle con un mando a distancia.
 
 ## <a name="motorServo"></a>Servo motor
@@ -304,7 +304,7 @@ Hacer que el coche de v1.1 se controle con un mando a distancia.
 ## <a name="sensorUltrasonidos"></a>Sensor de ultrasonidos
 * HC-SR04
 
-### <a name="metroUltrasonidos"></a>Metro de "ultrasonidos"
+### <a name="metroUltrasonidos"></a>Ejercicio: Metro de "ultrasonidos"
 Hacer un "metro" que permita medir la distancia hasta la pared, techo, ...,
 usando ultrasonidos. La distancia la muestra en el monitor serie.
 
@@ -312,7 +312,7 @@ usando ultrasonidos. La distancia la muestra en el monitor serie.
 * HC-SR04
 * Cables
 
-### <a name="semaforoPeatonesAutomatico"></a>Semáforo de peatones automático
+### <a name="semaforoPeatonesAutomatico"></a>Ejercicio: Semáforo de peatones automático
 Este semáforo es igual al semáforo de peatones salvo que en lugar de que el
 peaton tenga que pulsar un botón, el semáforo se pone en verde automáticamente
 para los peatones cuando detecta que se acerca uno. 
@@ -330,7 +330,7 @@ los peatones que hayan llegado, ...
 * HC-SR04
 * cables
 
-### <a name="cochev30"></a>Coche v3.0: con sensor ultrasonidos
+### <a name="cochev30"></a>Ejercicio: Coche v3.0: con sensor ultrasonidos
 Añadirle a la versión 2 del coche un sensor de ultrasonidos. Programarlo para
 que el coche sea automático: se mueva hacia adelante hasta encontrar una
 pared. En ese momento gira, cambia la dirección y va a otro sitio.
@@ -349,7 +349,7 @@ ejemplos: [01](https://www.youtube.com/watch?v=ZFO2q83cBfY)
 * CNY70 
 
 
-### <a name="cochev40"></a>Coche v4.0: seguidor de línea
+### <a name="cochev40"></a>Ejercicio: Coche v4.0: seguidor de línea
 Añadirle a la v3 un sensor (ó más de uno) para poder hacer un coche seguidor
 de línea. [Aquí](https://www.youtube.com/watch?v=db6oKIfeocs) tienes un
 ejemplo de cómo funcionan.
