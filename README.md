@@ -1,10 +1,11 @@
 # Tutorial básico de Arduino
 
 * [Primeros pasos](#basico)
-* [Blink](#tst_blink)
+    * [Blink](#tst_blink)
 
 * [Primer programa: Hola, mundo!](#holaMundo)
-    * [Coche fantástico (efecto de LEDs)](#cocheFantastico)
+* [Programación: funciones y bucles for](#programFunciones)
+    * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
 * [Pulsadores](#tst_pulsadores)
@@ -113,10 +114,31 @@ internet; otro escrito en C++ moderno.
 	       [v2](src/cpp/hola_mundo_v2)
 
 
-### <a name="cocheFantastico"></a>Coche fántastico
+## <a name="programFunciones"></a>Programación: funciones y bucles for
+* [Primera versión](src/cpp/coche_fantastico_v1)
+  Usamos la función `write` para no tener que estar repitiendo continuamente
+  código.
 
-Hacer el efecto del [coche
-  fantástico](https://www.youtube.com/watch?v=c4M-GAS4cWE)
+* [Segundo versión](src/cpp/coche_fantastico_v2)
+  Usamos bucles `for` para simplificar el código.
+
+
+### <a name="efectoLEDs"></a>Efecto de LEDs
+Prueba a jugar con los LEDs haciendo diferentes efectos. 
+
+Posibilidades:
+
+1. Se encienden 2 LEDs de un extremo y se mueven los 2 LEDs a la vez hasta el
+   otro extremo. Puedes hacer que reboten o no. Elige.
+2. Se encienden los LEDs de los extremos y se van moviendo hacia el centro.
+3. Se encienden los dos LEDs del centro y se mueven hacia los extremos.
+4. Se enciende el LED de la derecha y se mueve hasta el extremo izquierdo.
+   Ese LED se queda iluminado. Se enciende de nuevo el LED de la derecha y se
+   vuelve a mover "chocando" contra el LED de la derecha que estaba encendido,
+   quedándose el segundo por la derecha iluminado, y así repetidamente.
+
+5. Se encienden los LED impares, se apagan, se encienden los pares, se apagan,
+   y volvemos a empezar.
 
 
 #### Material

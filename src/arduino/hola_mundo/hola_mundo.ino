@@ -7,7 +7,7 @@ void setup() {
     while (!Serial) { ; } // espera hasta que conecte
 }
 
-// La función loop() se va a estar continuamente ejecutando
+// La función loop() va a estar ejecutándose continuamente 
 void loop() {
     Serial.println("Hola, mundo!"); // imprime 'Hola, mundo'
     delay(1000);                    // espera 1000 ms (= 1 s). No hace nada. Se limita a esperar.

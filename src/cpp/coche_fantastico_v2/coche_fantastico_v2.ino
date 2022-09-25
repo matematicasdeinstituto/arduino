@@ -1,0 +1,65 @@
+// Ideas nuevas: 
+//  1. Bucles for
+//  2. Toda función debe de ser pequeña: máximo 4-5 líneas.
+//     Lo más grande que debe de ser una función es el tamaño de la pantalla.
+//     Hay programas con funciones de más de 10.000 líneas: es imposible
+//     razonar sobre esas funciones.
+//
+//     Recuerda: es muy fácil programar, muy difícil programar bien.
+//     Todos los programas tienen errores, todos los programas los querrás
+//     modificar en el futuro para añadir cosas. Escribe el programa de tal
+//     manera que lo entiendas dentro de 1 año.
+//
+// Conexiones
+constexpr int led_min_pin = 2;
+constexpr int led_max_pin = 9;
+
+// Configuración
+constexpr int time_delay_in_ms = 100;
+
+
+void apaga_leds()
+{
+    for (int i = led_min_pin; i <= led_max_pin; ++i)
+        digitalWrite(i, LOW);
+}
+
+
+void enciende_solo(int led_pin)
+{
+    apaga_leds();
+    digitalWrite(led_pin, HIGH);
+}
+
+
+// Los LEDs son pines de salida
+void setup() {
+    for (int i = led_min_pin; i <= led_max_pin; ++i)
+        pinMode(i, OUTPUT);
+}
+
+
+void loop() {
+    for (int i = led_min_pin; i <= led_max_pin; ++i){
+        enciende_solo(i);
+        delay(time_delay_in_ms);
+    }
+
+    for (int i = led_max_pin; i >= led_min_pin; --i){
+        enciende_solo(i);
+        delay(time_delay_in_ms);
+    }
+}
+
+
+int main()
+{
+    init();
+    setup();
+
+    while (true){
+        loop();
+    }
+}
+
+
