@@ -105,9 +105,12 @@ en pantalla. Veamos cómo hacerlo.
 
 IMPORTANTE: El lenguaje de programación que usa Arduino es C++. Sin embargo,
 por motivos que desconozco, el estilo de programación de los ejemplos que se
-encuentran en internet es un C++ obsoleto. Por ello voy siempre a suministrar
-mínimo 2 ejemplos: uno escrito al estilo de los ejemplos encontrados en
-internet; otro escrito en C++ moderno. 
+encuentran en internet es un C++ obsoleto. Como sería un error aprender un
+estilo de programación anticuado en general los ejemplos los suministraré en
+C++ moderno. Con todo, cuando ponga 'versión arduino' es porque el ejemplo
+será el típico que viene en internet. Suministraré una versión más moderna
+del mismo programa para comparar.
+
 
 * [Versión arduino](src/arduino/hola_mundo)
 * Versión C++: [v1](src/cpp/hola_mundo) 
