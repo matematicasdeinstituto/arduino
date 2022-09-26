@@ -18,16 +18,16 @@ constexpr int led_max_pin = 9;
 constexpr int time_delay_in_ms = 100;
 
 
-void apaga_leds()
+void leds_apaga()
 {
     for (int i = led_min_pin; i <= led_max_pin; ++i)
         digitalWrite(i, LOW);
 }
 
 
-void enciende_solo(int led_pin)
+void leds_enciende_solo(int led_pin)
 {
-    apaga_leds();
+    leds_apaga();
     digitalWrite(led_pin, HIGH);
 }
 
@@ -41,12 +41,12 @@ void setup() {
 
 void loop() {
     for (int i = led_min_pin; i <= led_max_pin; ++i){
-        enciende_solo(i);
+        leds_enciende_solo(i);
         delay(time_delay_in_ms);
     }
 
     for (int i = led_max_pin; i >= led_min_pin; --i){
-        enciende_solo(i);
+        leds_enciende_solo(i);
         delay(time_delay_in_ms);
     }
 }

@@ -5,6 +5,9 @@
 
 * [Primer programa: Hola, mundo!](#holaMundo)
 * [Programación: funciones y bucles for](#programFunciones)
+    * [Ejercicio: LEDs parpadeando](efectoLEDs)
+
+* [Programación: prototipos de funciones](#PrototiposFunciones)
     * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
@@ -126,21 +129,61 @@ del mismo programa para comparar.
   Usamos bucles `for` para simplificar el código.
 
 
+### <a name="efectoLEDs"></a>Ejercicio: LEDs parpadeando
+
+Usando el mismo circuito que en el coche fantástico haz que los LEDs parpadeen
+2 ó 3 veces.
+
+El programa tiene que contener las siguientes funciones:
+* `leds_init()`: inicializa los pines donde se conectan los LEDS como de
+  salida.
+* `leds_apaga()`: apaga todos los leds.
+* `leds_enciende()`: enciende todos los leds.
+* `leds_parpadea(int n)`: parpadea `n` veces.
+
+
+#### Material
+* 8 LEDs
+* 8 resistencias 1k
+* cables
+
+## <a name="programPrototiposFunciones"></a>Programación: prototipos de funciones
+[Posible solución al ejercicio anterior](src/cpp/leds_parpadeando_v1)
+
+## <a name="programHeaderFiles"></a>Programación: descomponiendo el programa
+en archivos
+
+* [Aquí](src/cpp/leds_parpadeando_v2) puedes encontrar el mismo programa
+  solución anterior más estructurado: en un archivo tenemos el programa
+  principal, mientras que en otro tenemos el comportamiento de los leds.
+
+* ¿Qué son las guardas de cabecera? ¿Por qué el archivo `.h` tiene líneas
+```
+#ifndef __LEDS_H__
+#define __LEDS_H__
+...
+#endif
+```
+    Es para evitar que el compilador se quede colgado al intentar compilar el
+    programa. Prueba a compilar el siguiente
+    [ejemplo](src/cpp/recursive_header)
+
+
 ### <a name="efectoLEDs"></a>Ejercicio: Efecto de LEDs
 Prueba a jugar con los LEDs haciendo diferentes efectos. 
 
 Posibilidades:
 
-1. Se encienden 2 LEDs de un extremo y se mueven los 2 LEDs a la vez hasta el
+2. Se encienden 2 LEDs de un extremo y se mueven los 2 LEDs a la vez hasta el
    otro extremo. Puedes hacer que reboten o no. Elige.
-2. Se encienden los LEDs de los extremos y se van moviendo hacia el centro.
-3. Se encienden los dos LEDs del centro y se mueven hacia los extremos.
-4. Se enciende el LED de la derecha y se mueve hasta el extremo izquierdo.
+3. Se encienden los LEDs de los extremos y se van moviendo hacia el centro.
+4. Se encienden los dos LEDs del centro y se mueven hacia los extremos.
+5. Se enciende el LED de la derecha y se mueve hasta el extremo izquierdo.
    Ese LED se queda iluminado. Se enciende de nuevo el LED de la derecha y se
    vuelve a mover "chocando" contra el LED de la derecha que estaba encendido,
    quedándose el segundo por la derecha iluminado, y así repetidamente.
 
-5. Se encienden los LED impares, se apagan, se encienden los pares, se apagan,
+6. Se encienden los LED impares, se apagan, se encienden los pares, se apagan,
    y volvemos a empezar.
 
 
