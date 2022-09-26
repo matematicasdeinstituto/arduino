@@ -1,7 +1,9 @@
 # Tutorial básico de Arduino
 
 * [Primeros pasos](#basico)
-    * [Blink](#tst_blink)
+    * [Ejercicio: Modificando el tiempo de parpadeo](#tst_blink)
+
+* [Electrónica: circuito con un LED](#elecLED)
 
 * [Primer programa: Hola, mundo!](#holaMundo)
 * [Programación: funciones y bucles for](#programFunciones)
@@ -60,7 +62,7 @@
 
 3. Después de instalarlo conviene probar un pequeño programa para ver que todo
    esté bien configurado. Para ello conecta tu arduino al ordenador, abre el 
-   ejemplo `File > Examples > 01.Basics > Blink`, y compilalo cargándolo en el
+   ejemplo `File > Examples > 01.Basics > Blink`, y compílalo cargándolo en el
    arduino (pulsa el boton "flecha"). Lo más probable es que te falle porque
    no esté bien configurado.
 
@@ -79,14 +81,7 @@
 
 
 
-### <a name="tst_blink"></a>Ejercicio: Blink
-#### Material
-* 1 LED
-* 1 resistencia 1K (la típica suele ser de 330 ohms)
-* Cables
-
-
-#### Actividad
+### <a name="tst_blink"></a>Ejercicio: modificando tiempo de parpadeo
 1. El programa `blink` lo que hace es enciende un LED durante 1 segundo (= 1000
    ms), luego lo apaga durante 1 segundo (= 1000 ms) y volviendo a empezar.
 
@@ -96,13 +91,27 @@
    pon 2000 ms; ó 500 ms. ¿qué pasa si enciendes y apagas el led durante 10
    ms?
 
-2. Explicación del programa.
+## <a name="elecLED"></a>Electrónica: circuito con un LED
+El problema con el LED que trae el microcontrolador es que es muy pequeño y
+apenas se ve. Hagamos un circuito con un LED más grande.
 
-3. Electrónica: hacer un circuito muy básico que encienda un LED.
+### Material
+* 1 LED
+* 1 resistencia 1K (la típica suele ser de 330 ohms)
+* Cables
 
-4. El LED que estamos encendiendo es muy pequeño y apenas se ve. Encendamos un
-   LED más grande: conecta al pin 13 (el pin del LED que estás encendiendo) a
-   un LED normal.
+
+### <a name="tst_blink2"></a>Ejercicio: blink con un LED normal
+Conecta el circuito del apartado anterior al pin 13 del Arduino, y ejecuta el
+programa de Blink. Prueba a cambiar el tiempo de parpadeo. ¿A partir de que
+tiempo no eres capaz de ver que parpadean los LEDs? ¿Sabes lo que es la
+persistencia de la imagen en la retina? 
+
+
+### Material
+* 1 LED
+* 1 resistencia 1K (la típica suele ser de 330 ohms)
+* Cables
 
 ## <a name="holaMundo"></a>Primer programa: hola, mundo!
 El primer programa que se aprende al aprender C++ es imprimir "Hola, mundo!"
