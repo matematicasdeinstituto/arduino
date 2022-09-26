@@ -169,8 +169,7 @@ El programa tiene que contener las siguientes funciones:
 ## <a name="programPrototiposFunciones"></a>Programación: prototipos de funciones
 [Posible solución al ejercicio anterior](src/cpp/leds_parpadeando_v1)
 
-## <a name="programHeaderFiles"></a>Programación: descomponiendo el programa
-en archivos
+## <a name="programHeaderFiles"></a>Programación: descomponiendo el programa en archivos
 
 * [Aquí](src/cpp/leds_parpadeando_v2) puedes encontrar el mismo programa
   solución anterior más estructurado: en un archivo tenemos el programa
