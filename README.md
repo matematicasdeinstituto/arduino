@@ -133,6 +133,13 @@ del mismo programa para comparar.
 
 
 ## <a name="programFunciones"></a>Programación: funciones y bucles for
+Hace muchos años había una serie de televisión que se llamaba "el coche
+fantástico". En el frontal el coche tenía una serie de LEDs que se encendían
+de un lado a otro. [Aquí](https://www.youtube.com/watch?v=t-iacBu8U1o) puedes
+ver un vídeo con el efecto. 
+
+Hagamos un programa que genere un efecto parecido.
+
 * [Primera versión](src/cpp/coche_fantastico_v1)
   Usamos la función `write` para no tener que estar repitiendo continuamente
   código.
