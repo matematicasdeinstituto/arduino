@@ -4,6 +4,7 @@
     * [Ejercicio: Modificando el tiempo de parpadeo](#tst_blink)
 
 * [Electrónica: circuito con un LED](#elecLED)
+    * [Ejercicio: blink con un LED normal](#tst_blink2)
 
 * [Primer programa: Hola, mundo!](#holaMundo)
 * [Programación: funciones y bucles for](#programFunciones)
