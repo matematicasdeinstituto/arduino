@@ -17,7 +17,9 @@ constexpr int led_max_pin = 9;
 // Configuración
 constexpr int time_delay_in_ms = 100;
 
-
+// Observa la forma de nombrar a las funciones: leds_accion. Esta forma de
+// escribir va a ser importante para que sea más sencillo aprender a manejar
+// clases.
 void leds_apaga()
 {
     for (int i = led_min_pin; i <= led_max_pin; ++i)

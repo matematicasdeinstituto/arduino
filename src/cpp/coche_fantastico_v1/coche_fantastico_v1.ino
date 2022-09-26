@@ -1,5 +1,5 @@
 // Ideas nuevas: 
-//  1. Concepto de función. Ejemplo: write()
+//  1. Funciones con más de un argumentos. Ejemplo: write()
 //  2. Números mágicos: evítalos!!! Ejemplo: time_delay_in_ms
 //
 // Conexiones
@@ -15,6 +15,10 @@ constexpr int led7_pin = 9;
 // Configuración
 constexpr int time_delay_in_ms = 100;
 
+// CUIDADO: pasarle tantos argumentos a una función es ineficiente y muy
+// propenso a error. Esto simplemente es un ejemplo para ver que a una función
+// le podemos pasar más de un argumento. En la versión 2 eliminamos todo esto
+// por ser mala práctica.
 void write(int led0, int led1, int led2, int led3, 
            int led4, int led5, int led6, int led7)
 {

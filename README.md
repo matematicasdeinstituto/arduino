@@ -7,7 +7,11 @@
     * [Ejercicio: blink con un LED normal](#tst_blink2)
 
 * [Primer programa: Hola, mundo!](#holaMundo)
-* [Programación: funciones y bucles for](#programFunciones)
+
+* [Programación: funciones (1)](#programFunciones1)
+    * [Ejercicio: Valor de un polinomio](#valorPolinomio)
+
+* [Programación: funciones y bucles for (2)](#programFunciones2)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
@@ -131,8 +135,25 @@ del mismo programa para comparar.
 * Versión C++: [v1](src/cpp/hola_mundo) 
 	       [v2](src/cpp/hola_mundo_v2)
 
+## <a name="programFunciones1"></a>Programación: funciones (1)
+[Aquí](src/cpp/pow2) puedes encontrar un programa que calcula los cuadrados 
+del 0 en adelante. 
 
-## <a name="programFunciones"></a>Programación: funciones y bucles for
+### <a name="valorPolinomio"></a>Ejercicio: Valor de un polinomio
+Haz que Arduino calcule la tabla de valores del polinomio `p(x) = 2x + 1`,
+para `x` positivos *múltiplos de 10*.
+
+Para ello crea una función que:
+1. Se llame `pol`
+2. Se le pase un entero `x` como argumento.
+3. Devuelva un entero.
+
+*Ayuda: para sumarle 1 a una variable lo más eficiente es escribir `++x`. Para
+sumarle 10, puedes escribir `x = x + 10`, aunque suele ser más eficiente `x +=
+10`*
+
+
+## <a name="programFunciones2"></a>Programación: funciones y bucles for (2)
 Hace muchos años había una serie de televisión que se llamaba "el coche
 fantástico". En el frontal el coche tenía una serie de LEDs que se encendían
 de un lado a otro. [Aquí](https://www.youtube.com/watch?v=t-iacBu8U1o) puedes
