@@ -11,7 +11,7 @@
 * [Programación: funciones (1)](#programFunciones1)
     * [Ejercicio: Valor de un polinomio](#valorPolinomio)
 
-* [Programación: funciones y bucles for (2)](#programFunciones2)
+* [Programación: funciones (2) y bucles for](#programFunciones2)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
@@ -153,7 +153,7 @@ sumarle 10, puedes escribir `x = x + 10`, aunque suele ser más eficiente `x +=
 10`*
 
 
-## <a name="programFunciones2"></a>Programación: funciones y bucles for (2)
+## <a name="programFunciones2"></a>Programación: funciones (2) y bucles for
 Hace muchos años había una serie de televisión que se llamaba "el coche
 fantástico". En el frontal el coche tenía una serie de LEDs que se encendían
 de un lado a otro. [Aquí](https://www.youtube.com/watch?v=t-iacBu8U1o) puedes
