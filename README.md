@@ -12,7 +12,6 @@
     * [Ejercicio: Valor de un polinomio](#valorPolinomio)
 
 * [Programación: tipos básicos en C++](#programTypes)
-    * [Ejercicio: rango de valores de `int`](#rangoValoresInt)
     
 * [Programación: funciones (2) y bucles for](#programFunciones2)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
@@ -171,12 +170,6 @@ Para entender lo que significa veamos otros dos tipos básicos de C++:
 [Este programa](src/cpp/uint8_t) muestra los valores que puede tomar un número 
 de tipo `uint8_t`, mientras que [este otro](src/cpp/int8_t) es el equivalente
 para un `int8_t`. Mira a ver el rango de valores que puede tomar cada tipo.
-
-
-### <a name="rangoValoresInt"></a>Ejercicio: rango de valores de `int`
-El tipo más básico que representa a un número en C++ es `int`: representa un
-entero con signo (positivo/negativo) de 2 bytes. Modifica el programa anterior
-para ver qué rango de valores puede tomar. 
 
 
 
@@ -509,6 +502,5 @@ Para cotillear:
 
 ## <a name="tagSoluciones"></a>Soluciones ejercicios
 * [Valor de un polinomio](src/cpp/polinomio)
-* [Rango de valores de `int`](src/cpp/int)
 * [Leds parpadeando](#PrototiposFunciones)
 

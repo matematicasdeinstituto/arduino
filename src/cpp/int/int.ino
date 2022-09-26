@@ -11,7 +11,9 @@ int main()
     while (!Serial) 
         { ; }
 
-    int i = 0;
+    // Si empezamos en 30000 no hace overflow!!!!
+    // int i = 30000; 
+    int i = 40000;  // aquí sí hace overflow!!!
     while (true){
         Serial.println(i);
         ++i;
