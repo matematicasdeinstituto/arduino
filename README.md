@@ -8,7 +8,7 @@
 
 * [Primer programa: Hola, mundo!](#holaMundo)
 * [Programación: funciones y bucles for](#programFunciones)
-    * [Ejercicio: LEDs parpadeando](ledsParpadeando)
+    * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
 
