@@ -11,6 +11,9 @@
 * [Programación: funciones (1)](#programFunciones1)
     * [Ejercicio: Valor de un polinomio](#valorPolinomio)
 
+* [Programación: tipos básicos en C++](#programTypes)
+    * [Ejercicio: rango de valores de `int`](#rangoValoresInt)
+    
 * [Programación: funciones (2) y bucles for](#programFunciones2)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
@@ -52,6 +55,8 @@
 * [Material](#tagmaterial)
 
 * [Concursos](#tagConcursos)
+
+* [Soluciones ejercicios](#tagSoluciones)
 
 
 ## <a name="basico"></a>Primeros pasos
@@ -151,6 +156,28 @@ Para ello crea una función que:
 *Ayuda: para sumarle 1 a una variable lo más eficiente es escribir `++x`. Para
 sumarle 10, puedes escribir `x = x + 10`, aunque suele ser más eficiente `x +=
 10`*
+
+## <a name="programTypes"></a>Programación: tipos básicos en C++
+Un `int` en C++ representa un número entero (números positivos y negativos),
+pero el compilador reserva solo 2 bytes luego en la realidad `int` **NO** es
+un número entero sino un **entero de 2 bytes**. Esta diferencia importante se
+suele olvidar muchas veces a la hora de programar pudiendo generarse errores
+graves.
+
+Para entender lo que significa veamos otros dos tipos básicos de C++:
+* `uint8_t` es un entero positivo de 8 bits (1 byte)
+* `int8_t` un número entero con signo (positivo/negativo) de 8 bits (1 byte).
+
+[Este programa](src/cpp/uint8_t) muestra los valores que puede tomar un número 
+de tipo `uint8_t`, mientras que [este otro](src/cpp/int8_t) es el equivalente
+para un `int8_t`. Mira a ver el rango de valores que puede tomar cada tipo.
+
+
+### <a name="rangoValoresInt"></a>Ejercicio: rango de valores de `int`
+El tipo más básico que representa a un número en C++ es `int`: representa un
+entero con signo (positivo/negativo) de 2 bytes. Modifica el programa anterior
+para ver qué rango de valores puede tomar. 
+
 
 
 ## <a name="programFunciones2"></a>Programación: funciones (2) y bucles for
@@ -478,4 +505,10 @@ Para cotillear:
     [página internacional](https://www.eurobot.org/eurobot-junior/)
 
     Plazo de inscripción: hasta finales de diciembre.
+
+
+## <a name="tagSoluciones"></a>Soluciones ejercicios
+* [Valor de un polinomio](src/cpp/polinomio)
+* [Rango de valores de `int`](src/cpp/int)
+* [Leds parpadeando](#PrototiposFunciones)
 
