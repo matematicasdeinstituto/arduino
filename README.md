@@ -8,7 +8,7 @@
 
 * [Primer programa: Hola, mundo!](#holaMundo)
 * [Programación: funciones y bucles for](#programFunciones)
-    * [Ejercicio: LEDs parpadeando](efectoLEDs)
+    * [Ejercicio: LEDs parpadeando](ledsParpadeando)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
 
@@ -148,7 +148,7 @@ Hagamos un programa que genere un efecto parecido.
   Usamos bucles `for` para simplificar el código.
 
 
-### <a name="efectoLEDs"></a>Ejercicio: LEDs parpadeando
+### <a name="ledsParpadeando"></a>Ejercicio: LEDs parpadeando
 
 Usando el mismo circuito que en el coche fantástico haz que los LEDs parpadeen
 2 ó 3 veces.
