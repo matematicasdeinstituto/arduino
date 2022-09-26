@@ -166,9 +166,9 @@ en archivos
 ...
 #endif
 ```
-    Es para evitar que el compilador se quede colgado al intentar compilar el
-    programa. Prueba a compilar el siguiente
-    [ejemplo](src/cpp/recursive_header)
+Es para evitar que el compilador se quede colgado al intentar compilar el
+programa. Prueba a compilar el siguiente
+[ejemplo](src/cpp/recursive_header)
 
 
 ### <a name="efectoLEDs"></a>Ejercicio: Efecto de LEDs
