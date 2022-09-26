@@ -8,6 +8,8 @@
     * [Ejercicio: LEDs parpadeando](efectoLEDs)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
+
+* [Programación: descomponiendo el programa en archivos](#programHeaderFiles)
     * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
