@@ -16,13 +16,13 @@
 * [Programación: funciones (2)](#programFunciones2)
 * [Programación: bucles for](#programFor1)
     * [Ejercicio: números pares](#numerosPares)
-
-* [Programación: condicionales if/else](#programIfElse)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#programPrototiposFunciones)
 
 * [Programación: descomponiendo el programa en archivos](#programHeaderFiles)
+
+* [Programación: condicionales if/else](#programIfElse)
     * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
