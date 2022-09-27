@@ -205,11 +205,6 @@ una coma al final de cada serie de números. ¿Podrías corregir ese error? Dos
 posibilidades: que escriba un punto y aparte al final, o que no escriba nada.
 
 
-## <a name="programIfElse"></a>Programación: condicionales if/else
-[Aquí](src/cpp/par_impar) puedes encontrar un programa que muestra 
-los números del 1 al 10 indicando si son pares o impares.
-
-
 
 ### <a name="ledsParpadeando"></a>Ejercicio: LEDs parpadeando
 
@@ -248,6 +243,11 @@ El programa tiene que contener las siguientes funciones:
 Es para evitar que el compilador se quede colgado al intentar compilar el
 programa. Prueba a compilar el siguiente
 [ejemplo](src/cpp/recursive_header)
+
+
+## <a name="programIfElse"></a>Programación: condicionales if/else
+[Aquí](src/cpp/par_impar) puedes encontrar un programa que muestra 
+los números del 1 al 10 indicando si son pares o impares.
 
 
 ### <a name="efectoLEDs"></a>Ejercicio: Efecto de LEDs
@@ -525,7 +525,7 @@ Para cotillear:
 
 ## <a name="tagSoluciones"></a>Soluciones ejercicios
 * [Valor de un polinomio](src/cpp/polinomio)
-* [LEDs parpadeando](#PrototiposFunciones)
+* [LEDs parpadeando](#programPrototiposFunciones)
 * [Números pares](src/cpp/numeros_pares)
 * [Efecto de LEDs](src/cpp/luces_v1)
 
