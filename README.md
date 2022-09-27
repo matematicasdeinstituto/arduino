@@ -16,6 +16,8 @@
 * [Programación: funciones (2)](#programFunciones2)
 * [Programación: bucles for](#programFor1)
     * [Ejercicio: números pares](#numerosPares)
+
+* [Programación: condicionales if/else](#programIfElse)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#programPrototiposFunciones)
@@ -201,6 +203,12 @@ bucle `for`.
 El programa usado para escribir los múltiplos de 10 tiene un error: escribe
 una coma al final de cada serie de números. ¿Podrías corregir ese error? Dos
 posibilidades: que escriba un punto y aparte al final, o que no escriba nada.
+
+
+## <a name="programIfElse"></a>Programación: condicionales if/else
+[Aquí](src/cpp/par_impar) puedes encontrar un programa que muestra 
+los números del 1 al 10 indicando si son pares o impares.
+
 
 
 ### <a name="ledsParpadeando"></a>Ejercicio: LEDs parpadeando
@@ -518,7 +526,7 @@ Para cotillear:
 ## <a name="tagSoluciones"></a>Soluciones ejercicios
 * [Valor de un polinomio](src/cpp/polinomio)
 * [LEDs parpadeando](#PrototiposFunciones)
-* [Efecto de LEDs](src/cpp/luces_v1)
 * [Números pares](src/cpp/numeros_pares)
+* [Efecto de LEDs](src/cpp/luces_v1)
 
 
