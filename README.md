@@ -160,8 +160,7 @@ sumarle 10, puedes escribir `x = x + 10`, aunque suele ser más eficiente `x +=
 Un `int` en C++ representa un número entero (números positivos y negativos),
 pero el compilador reserva solo 2 bytes luego en la realidad `int` **NO** es
 un número entero sino un **entero de 2 bytes**. Esta diferencia importante se
-suele olvidar muchas veces a la hora de programar pudiendo generarse errores
-graves.
+suele olvidar muchas veces a la hora de programar pudiendo generar graves errores.
 
 Para entender lo que significa veamos otros dos tipos básicos de C++:
 * `uint8_t` es un entero positivo de 8 bits (1 byte)
@@ -233,17 +232,18 @@ Prueba a jugar con los LEDs haciendo diferentes efectos.
 
 Posibilidades:
 
-2. Se encienden 2 LEDs de un extremo y se mueven los 2 LEDs a la vez hasta el
+1. Se encienden 2 LEDs de un extremo y se mueven los 2 LEDs a la vez hasta el
    otro extremo. Puedes hacer que reboten o no. Elige.
-3. Se encienden los LEDs de los extremos y se van moviendo hacia el centro.
-4. Se encienden los dos LEDs del centro y se mueven hacia los extremos.
-5. Se enciende el LED de la derecha y se mueve hasta el extremo izquierdo.
+2. Se encienden los LEDs de los extremos y se van moviendo hacia el centro.
+3. Se encienden los dos LEDs del centro y se mueven hacia los extremos.
+4. Se enciende el LED de la derecha y se mueve hasta el extremo izquierdo.
    Ese LED se queda iluminado. Se enciende de nuevo el LED de la derecha y se
    vuelve a mover "chocando" contra el LED de la derecha que estaba encendido,
    quedándose el segundo por la derecha iluminado, y así repetidamente.
 
-6. Se encienden los LED impares, se apagan, se encienden los pares, se apagan,
+5. Se encienden los LED impares, se apagan, se encienden los pares, se apagan,
    y volvemos a empezar.
+
 
 
 #### Material
@@ -502,5 +502,6 @@ Para cotillear:
 
 ## <a name="tagSoluciones"></a>Soluciones ejercicios
 * [Valor de un polinomio](src/cpp/polinomio)
-* [Leds parpadeando](#PrototiposFunciones)
+* [LEDs parpadeando](#PrototiposFunciones)
+* [Efecto de LEDs](src/cpp/luces_v1)
 

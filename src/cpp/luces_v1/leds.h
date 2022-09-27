@@ -16,5 +16,10 @@ void leds_init(int led0, int led1);
 void leds_apaga(int led0, int led1);
 void leds_enciende(int led0, int led1);
 void leds_parpadea(int led0, int led1, int nrep);
+void leds_hacia_el_centro(int led0, int led1);
+void leds_del_centro_hacia_fuera(int led0, int led1);
+void leds_tetris(int led0, int led1);
+void leds_parpadeo_alterno(int led0, int led1);
+
 
 #endif

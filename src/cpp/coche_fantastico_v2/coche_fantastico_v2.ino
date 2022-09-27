@@ -22,6 +22,18 @@ constexpr int time_delay_in_ms = 100;
 // clases.
 void leds_apaga()
 {
+// 1ª versión: usando while
+// int i = 2;               <-- primera instrucción a realizar
+// while (i <= 9){          <-- condición para seguir iterando
+//  digitalWrite(i, LOW);
+//  ++i;                    <-- siempre al final incrementamos en 1 `i`.
+// }
+//
+// 2ª versión: bucle for
+// for (int i = 2; i <= 9; ++i)
+//  digitalWrite(i, LOW);
+//
+// 3ª versión: en lugar de 2 y 9 usamos led_min_pin/led_max_pin
     for (int i = led_min_pin; i <= led_max_pin; ++i)
         digitalWrite(i, LOW);
 }

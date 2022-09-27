@@ -14,13 +14,13 @@ constexpr int time_delay_in_ms = 100;
 
 
 void setup() {
-    leds_init();
+    leds_init(led_min_pin, led_max_pin);
 }
 
 
 void loop() {
-    leds_parpadea(3);
-    leds_apaga();
+    leds_parpadea(led_min_pin, led_max_pin, 3);
+    leds_apaga(led_min_pin, led_max_pin);
     delay(1000);
 }
 
