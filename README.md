@@ -14,11 +14,11 @@
 * [Programación: tipos básicos en C++](#programTypes)
     
 * [Programación: funciones (2)](#programFunciones2)
-* [Programación: bucles for](#proramFor1)
+* [Programación: bucles for](#programFor1)
     * [Ejercicio: números pares](#numerosPares)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
-* [Programación: prototipos de funciones](#PrototiposFunciones)
+* [Programación: prototipos de funciones](#programPrototiposFunciones)
 
 * [Programación: descomponiendo el programa en archivos](#programHeaderFiles)
     * [Efectos de LEDs](#efectoLEDs)
