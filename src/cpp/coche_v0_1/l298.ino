@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 #include "l298.h"
 
 // Implementación de la clase L298N

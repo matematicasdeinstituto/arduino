@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Ideas nuevas:
 //  1. Separar en diferentes archivos el programa.
 //  2. Archivos de cabecera.

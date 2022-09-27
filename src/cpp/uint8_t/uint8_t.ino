@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Un uint8_t es un entero positivo de 8 bits.  (en matemáticas se llaman
 // números naturales).
 // Si un uint8_t tiene solo 8 bits, ¿cuántos números se pueden representar con

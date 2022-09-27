@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Prueba básica L298N.
 // Probamos a hacer girar los motores en uno u otro sentido.
 // Estilo de programación: C++

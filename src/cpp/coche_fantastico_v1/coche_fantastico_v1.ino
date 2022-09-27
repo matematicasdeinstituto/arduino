@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Ideas nuevas: 
 //  1. Funciones con más de un argumentos. Ejemplo: write()
 //  2. Números mágicos: evítalos!!! Ejemplo: time_delay_in_ms

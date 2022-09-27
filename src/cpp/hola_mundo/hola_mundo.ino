@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Programa básico
 
 // La función setup() es la primera función que se llama al empezar el programa

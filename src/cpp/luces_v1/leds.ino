@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 #include "leds.h"   // fundamental: incluir el archivo con los prototipos
 
 // Observar otra forma de escribir las funciones: en una línea

@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Un int8_t es un entero de 8 bits. 
 // Los enteros son números que pueden ser positivos o negativos.
 // Si un int8_t tiene solo 8 bits, ¿cuántos números se pueden representar con

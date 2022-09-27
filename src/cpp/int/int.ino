@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Un int es un entero de 2 bytes.
 // Veamos el rango de valores que puede tomar.
 //

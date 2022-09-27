@@ -13,7 +13,9 @@
 
 * [Programación: tipos básicos en C++](#programTypes)
     
-* [Programación: funciones (2) y bucles for](#programFunciones2)
+* [Programación: funciones (2)](#programFunciones2)
+* [Programación: bucles for](#proramFor1)
+    * [Ejercicio: números pares](#numerosPares)
     * [Ejercicio: LEDs parpadeando](#ledsParpadeando)
 
 * [Programación: prototipos de funciones](#PrototiposFunciones)
@@ -172,7 +174,7 @@ para un `int8_t`. Mira a ver el rango de valores que puede tomar cada tipo.
 
 
 
-## <a name="programFunciones2"></a>Programación: funciones (2) y bucles for
+## <a name="programFunciones2"></a>Programación: funciones (2)
 Hace muchos años había una serie de televisión que se llamaba "el coche
 fantástico". En el frontal el coche tenía una serie de LEDs que se encendían
 de un lado a otro. [Aquí](https://www.youtube.com/watch?v=t-iacBu8U1o) puedes
@@ -180,12 +182,25 @@ ver un vídeo con el efecto.
 
 Hagamos un programa que genere un efecto parecido.
 
-* [Primera versión](src/cpp/coche_fantastico_v1)
+* [Coche fantástico v1](src/cpp/coche_fantastico_v1)
   Usamos la función `write` para no tener que estar repitiendo continuamente
   código.
 
-* [Segundo versión](src/cpp/coche_fantastico_v2)
-  Usamos bucles `for` para simplificar el código.
+## <a name="programFor1"></a>Programación: bucles for
+* [Iteramos usando `while`](src/cpp/for01)
+* [Iteramos usando `for`](src/cpp/for02)
+
+Escribamos el programa del coche fantástico usando bucles for:
+* [Coche fantástico v2](src/cpp/coche_fantastico_v2)
+
+
+### <a name="numerosPares"></a>Ejercicio: números pares
+Escribe un programa que muestre todos los números pares hasta el 20. Usa un
+bucle `for`.
+
+El programa usado para escribir los múltiplos de 10 tiene un error: escribe
+una coma al final de cada serie de números. ¿Podrías corregir ese error? Dos
+posibilidades: que escriba un punto y aparte al final, o que no escriba nada.
 
 
 ### <a name="ledsParpadeando"></a>Ejercicio: LEDs parpadeando
@@ -504,4 +519,6 @@ Para cotillear:
 * [Valor de un polinomio](src/cpp/polinomio)
 * [LEDs parpadeando](#PrototiposFunciones)
 * [Efecto de LEDs](src/cpp/luces_v1)
+* [Números pares](src/cpp/numeros_pares)
+
 

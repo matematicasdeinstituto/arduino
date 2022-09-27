@@ -1,3 +1,6 @@
+// Autor: matematicasdeinstituto
+// Web  : https://github.com/matematicasdeinstituto/arduino
+
 // Ideas nuevas: 
 //  1. Bucles for
 //  2. Toda función debe de ser pequeña: máximo 4-5 líneas.
