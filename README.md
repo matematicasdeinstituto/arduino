@@ -26,6 +26,12 @@
     * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
+* [Programación: clases en C++](#programClases)
+    * [Clase LED](#claseLED)
+    * [Semáforo usando la clase LED](#semaforov2)
+    * [Cruce con dos semáforos](#semaforov3)
+
+
 * [Pulsadores](#tst_pulsadores)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
@@ -285,6 +291,49 @@ Hacer un semáforo.
 * 3 resistencias 1k
 * cables
 
+## <a name="programClases"></a>Programación: clases en C++
+
+### <a name="claseLED"></a>Ejemplo: clase LED
+[Aquí](src/cpp/clase_led) puedes encontrar el programa *blink* pero
+implementado usando la clase LED.
+
+Una de las ideas fundamentales a la hora de programar es que el código se
+pueda leer, se entienda lo que hace el programa. 
+
+Si yo quiero explicar a otra persona lo que hace mi programa *blink* le diré:
+
+    1. enciendo el LED
+    2. espero un tiempo
+    3. apago el LED
+    4. espero un tiempo
+    5. vuelvo a empezar
+
+Eso lo entiende cualquier persona. Yo quiero que mi programa sea igual de
+sencillo de entender. Las clases facilitan eso, ya que el programa anterior lo
+puedo escribir como
+```
+led.enciende();
+delay(1000);
+led.apaga();
+delay(1000);
+```
+
+y la única pega es que el *espera* en lugar de en español está escrito en
+inglés (*delay*).
+
+### <a name="semaforov2"></a>Ejemplo: Clase Semaforo
+[Aquí](src/cpp/semaforo_v2) puedes encontrar el programa del semáforo pero
+implementado con una clase.
+
+¿Cuál es la ventaja de este programa frente al programa inicial? Que ahora
+podemos tener 2, 3, 4, ... semáforos. Todos los que queramos y no tenemos que
+volver a escribir cómo funciona cada uno de ellos.
+
+
+### <a name="semaforov3"></a>Ejercicio: Cruce con dos semáforos
+Haz un cruce con 2 semáforos. Cuando uno de los semáforos está en verde, el
+otro está en rojo. Usa la clase Semaforo del ejemplo anterior.
+
 
 ## <a name="tst_pulsadores"></a>Pulsadores
 
@@ -528,5 +577,6 @@ Para cotillear:
 * [LEDs parpadeando](#programPrototiposFunciones)
 * [Números pares](src/cpp/numeros_pares)
 * [Efecto de LEDs](src/cpp/luces_v1)
+* [Semáforo v1](src/cpp/semaforo_v1)
 
 
