@@ -32,19 +32,19 @@ void semaforo_init(int led_rojo_pin, int led_amarillo_pin, int led_verde_pin)
 
 void semaforo_rojo()
 {
-    led_apaga(led_verde);
+    led_apaga(led_amarillo);
     led_enciende(led_rojo);
 }
 
 void semaforo_amarillo()
 {
-    led_apaga(led_rojo);
+    led_apaga(led_verde);
     led_enciende(led_amarillo);
 }
 
 void semaforo_verde()
 {
-    led_apaga(led_amarillo);
+    led_apaga(led_rojo);
     led_enciende(led_verde);
 }
 

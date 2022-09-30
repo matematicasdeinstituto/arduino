@@ -18,11 +18,11 @@ int main()
     Semaforo semaforo(led_rojo_pin, led_amarillo_pin, led_verde_pin);
 
     while (true){
-        semaforo.rojo_on();
+        semaforo.verde_on();
         delay(2000);
         semaforo.amarillo_on();
         delay(1000);
-        semaforo.verde_on();
+        semaforo.rojo_on();
         delay(2000);
     }
 }

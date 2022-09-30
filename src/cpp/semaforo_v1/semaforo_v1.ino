@@ -17,11 +17,11 @@ constexpr int led_rojo_pin      = 6;
 
 
 void loop() {
-    semaforo_rojo();
+    semaforo_verde();
     delay(2000);
     semaforo_amarillo();
     delay(1000);
-    semaforo_verde();
+    semaforo_rojo();
     delay(2000);
 }
 

@@ -3,7 +3,7 @@
 * [Primeros pasos](#basico)
     * [Ejercicio: Modificando el tiempo de parpadeo](#tst_blink)
 
-* [Electrónica: circuito con un LED](#elecLED)
+* [Electrónica: LEDs](#elecLED)
     * [Ejercicio: blink con un LED normal](#tst_blink2)
 
 * [Primer programa: Hola, mundo!](#holaMundo)
@@ -29,9 +29,10 @@
 * [Programación: clases en C++](#programClases)
     * [Clase LED](#claseLED)
     * [Semáforo usando la clase LED](#semaforov2)
-    * [Cruce con dos semáforos](#semaforov3)
+    * [Cruce con dos semáforos](#cruceSemaforosv1)
 
 
+* [Electrónica: Pulsadores](#elePulsadores)
 * [Pulsadores](#tst_pulsadores)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
@@ -101,22 +102,26 @@
 
 
 ### <a name="tst_blink"></a>Ejercicio: modificando tiempo de parpadeo
-1. El programa `blink` lo que hace es enciende un LED durante 1 segundo (= 1000
-   ms), luego lo apaga durante 1 segundo (= 1000 ms) y volviendo a empezar.
+El programa `blink` lo que hace es enciende un LED durante 1 segundo (= 1000
+ms), luego lo apaga durante 1 segundo (= 1000 ms) y volviendo a empezar.
 
-   La parte que controla el tiempo de encendido/apagado es `delay(1000)`. Esta
-   función le indica el microcontralador que no haga nada (que espere) durante
-   1000 ms. Prueba a cambiar el tiempo que está encendido. En lugar de 1000 ms
-   pon 2000 ms; ó 500 ms. ¿qué pasa si enciendes y apagas el led durante 10
-   ms?
+La parte que controla el tiempo de encendido/apagado es `delay(1000)`. Esta
+función le indica el microcontralador que no haga nada (que espere) durante
+1000 ms. Prueba a cambiar el tiempo que está encendido. En lugar de 1000 ms
+pon 2000 ms; ó 500 ms. ¿qué pasa si enciendes y apagas el led durante 10
+ms?
+
 
 ## <a name="elecLED"></a>Electrónica: circuito con un LED
 El problema con el LED que trae el microcontrolador es que es muy pequeño y
 apenas se ve. Hagamos un circuito con un LED más grande.
 
+Se puede conectar el LED directamente a una pila o a la salida de los 5V del
+Arduino.
+
 ### Material
 * 1 LED
-* 1 resistencia 1K (la típica suele ser de 330 ohms)
+* 1 resistencia 1k (la típica suele ser de 330 ohms)
 * Cables
 
 
@@ -330,15 +335,31 @@ podemos tener 2, 3, 4, ... semáforos. Todos los que queramos y no tenemos que
 volver a escribir cómo funciona cada uno de ellos.
 
 
-### <a name="semaforov3"></a>Ejercicio: Cruce con dos semáforos
+### <a name="cruceSemaforosv1"></a>Ejercicio: Cruce con dos semáforos
 Haz un cruce con 2 semáforos. Cuando uno de los semáforos está en verde, el
 otro está en rojo. Usa la clase Semaforo del ejemplo anterior.
+
+## <a name="elePulsadores"></a>Electrónica: Pulsadores
+Cuando pulsas el interruptor de la luz para entrar en una habitación el
+interruptor se queda en la posición nueva a la que has cambiado. Los
+pulsadores son parecidos a los interruptores salvo con la diferencia de que
+cuando los sueltas el pulsador vuelve a la posición inicial en la que estaba.
+
+Veamos cómo funciona un pulsador. Para ello, haz el siguiente circuito:
+conecta un LED a una pila (o a los 5V de salida del Arduino) y un pulsador de
+tal manera que el LED esté encendido cuando pulses el pulsador. No te olvides
+de poner la resistencia correspondiente para no quemar el LED.
+
+
+### Material
+* 1 LED
+* 1 resistencia 1k
+* 1 pulsador.
+* Cables
 
 
 ## <a name="tst_pulsadores"></a>Pulsadores
 
-1. Electrónica: para ver cómo funciona un pulsador hacer un circuito que
-   encienda o apague un LED al pulsarlo.
 
 2. Repetir el mismo circuito pero esta vez usando Arduino.
 
@@ -578,5 +599,6 @@ Para cotillear:
 * [Números pares](src/cpp/numeros_pares)
 * [Efecto de LEDs](src/cpp/luces_v1)
 * [Semáforo v1](src/cpp/semaforo_v1)
+* [Cruce de semáforos v1](src/cpp/cruce_semaforos_v1)
 
 
