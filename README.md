@@ -33,7 +33,12 @@
 
 
 * [Electrónica: Pulsadores](#elePulsadores)
-* [Pulsadores](#tst_pulsadores)
+    * [Puerta OR](#puertaOR)
+    * [Puerta AND](#puertaAND)
+
+* [Programación: Pulsadores](#programPulsadores)
+    * [Pull-up resistors](#ejempullupPulsador)
+    * [Pull-down resistors](#ejempulldownPulsador)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
@@ -357,11 +362,48 @@ de poner la resistencia correspondiente para no quemar el LED.
 * 1 pulsador.
 * Cables
 
+### <a name="puertaOR"></a>Ejercicio: puerta OR
+Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
+encienda cuando cualquiera de los 2 pulsadores se presione.
 
-## <a name="tst_pulsadores"></a>Pulsadores
+
+### <a name="puertaAND"></a>Ejercicio: puerta AND
+Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
+encienda únicamente cuando los dos pulsadores estén pulsados a la vez.
 
 
-2. Repetir el mismo circuito pero esta vez usando Arduino.
+
+## <a name="programPulsadores"></a>Programación: Pulsadores
+Hasta ahora hemos conectado los pines del Arduino únicamente a LEDs. A través
+de esos pines el Arduino puede (o no) suministrar corriente al LED. Si la
+suministra el LED estará encendido, en caso contrario apagado. Como sale
+corriente a través del pin del Arduino a ese pin lo llamamos *pin de salida*,
+porque sale corriente.
+
+En los pines de salida quien controla el potencial es el Arduino: el programa
+escribe un 0 (0 voltios) ó un 1 (5 voltios) en ese pin.
+
+Para averiguar si un pulsador está pulsado lo que vamos a hacer es medir el
+potencial de un circuito. Como ahora vamos a medir (=leer) el potencial en un
+pin del Arduino, a estos pines se les llama *pines de entrada*. 
+
+Dos circuitos básicos para saber si un pulsador está presionado o no: con pull-up resistor o con pull-down
+resistor.
+
+### <a name="ejempullupPulsador"></a>Ejemplo: pulsador con pull-up resistor
+Arduino trae un ejemplo. Para verlo, pincha en `File > Examples > 02.Digital >
+Button`.
+
+[Aquí](src/arduino/pullup_pulsador) puedes encontrar un programa similar al
+del ejemplo: es tipo arduino.
+
+
+#### Material
+* 1 pulsador
+* 1 resistencia de 10k (o 20k)
+* cables
+
+### <a name="ejempulldownPulsador"></a>Ejemplo: pulsador con pull-down resistor
 
 
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
