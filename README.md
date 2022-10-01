@@ -137,6 +137,9 @@ programa de Blink. Prueba a cambiar el tiempo de parpadeo. ¿A partir de que
 tiempo no eres capaz de ver que parpadean los LEDs? ¿Sabes lo que es la
 persistencia de la imagen en la retina? 
 
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/QNWXKy1bohM)
+
 
 ### Material
 * 1 LED
@@ -205,6 +208,9 @@ Hagamos un programa que genere un efecto parecido.
   Usamos la función `write` para no tener que estar repitiendo continuamente
   código.
 
+#### Resultado
+[Vídeo con el resultado](https://youtube.com/shorts/4Bjh7ld3DgI?feature=share)
+
 ## <a name="programFor1"></a>Programación: bucles for
 * [Iteramos usando `while`](src/cpp/for01)
 * [Iteramos usando `for`](src/cpp/for02)
@@ -235,6 +241,8 @@ El programa tiene que contener las siguientes funciones:
 * `leds_enciende()`: enciende todos los leds.
 * `leds_parpadea(int n)`: parpadea `n` veces.
 
+#### Resultado
+[Vídeo con el resultado](https://youtube.com/shorts/-WwpDeqQ2Bs?feature=share)
 
 #### Material
 * 8 LEDs
@@ -285,6 +293,9 @@ Posibilidades:
    y volvemos a empezar.
 
 
+#### Resultado
+[Vídeo con el resultado (1)](https://youtu.be/BzOcOpxq_XI)
+[Vídeo con el resultado (2)](https://youtu.be/GPrpHbzgl1Q)
 
 #### Material
 * 6-8 LEDs
@@ -294,6 +305,9 @@ Posibilidades:
 
 ### <a name="semaforo"></a>Ejercicio: Semáforo
 Hacer un semáforo.
+
+#### Resultado
+[Vídeo con el resultado](https://youtube.com/shorts/RWQUCvbBO7g?feature=share)
 
 #### Material
 * 1 LED rojo
@@ -345,6 +359,9 @@ volver a escribir cómo funciona cada uno de ellos.
 Haz un cruce con 2 semáforos. Cuando uno de los semáforos está en verde, el
 otro está en rojo. Usa la clase Semaforo del ejemplo anterior.
 
+#### Resultado
+[Vídeo con el resultado](https://youtube.com/shorts/VMj2FK9vXhA?feature=share)
+
 ## <a name="elePulsadores"></a>Electrónica: Pulsadores
 Cuando pulsas el interruptor de la luz para entrar en una habitación el
 interruptor se queda en la posición nueva a la que has cambiado. Los
@@ -356,6 +373,8 @@ conecta un LED a una pila (o a los 5V de salida del Arduino) y un pulsador de
 tal manera que el LED esté encendido cuando pulses el pulsador. No te olvides
 de poner la resistencia correspondiente para no quemar el LED.
 
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/aNBpg-pQGZ4)
 
 ### Material
 * 1 LED
@@ -367,11 +386,15 @@ de poner la resistencia correspondiente para no quemar el LED.
 Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
 encienda cuando cualquiera de los 2 pulsadores se presione.
 
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/pxFBEQX47rM)
 
 ### <a name="puertaAND"></a>Ejercicio: puerta AND
 Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
 encienda únicamente cuando los dos pulsadores estén pulsados a la vez.
 
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/scgejITpFwk)
 
 
 ## <a name="programPulsadores"></a>Programación: Pulsadores
@@ -408,6 +431,10 @@ hacerlo mira la versión 3:
 * [v3](src/cpp/clase_pulsador_pullup): escribimos una clase `Pulsador` que
   podamos reutilizar en otros programas como hacemos con `LED`.
 
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/K8IfUYAIUBk)
+
+
 #### Material
 * 1 pulsador
 * 1 resistencia de 10k (o 20k)
@@ -423,6 +450,9 @@ resistencia fuerza el potencial a 0 voltios. En este caso se llama
 Monta el circuito correspondiente y reescribe el programa anterior de acuerdo
 a esta resistencia. En este vídeo puedes encontrar el circuito que tienes que
 montar.
+
+#### Resultado
+[Vídeo con el resultado](https://youtu.be/aIDDdeC-X5M)
 
 ### <a name="ejemArduinoPullup"></a>Ejemplo: Arduino pull-up resistor
 
