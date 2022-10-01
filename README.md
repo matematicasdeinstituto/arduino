@@ -26,7 +26,7 @@
     * [Efectos de LEDs](#efectoLEDs)
     * [Semáforo básico](#semaforo)
 
-* [Programación: clases en C++](#programClases)
+* [Programación: clases en C++ (1)](#programClases)
     * [Clase LED](#claseLED)
     * [Semáforo usando la clase LED](#semaforov2)
     * [Cruce con dos semáforos](#cruceSemaforosv1)
@@ -39,6 +39,7 @@
 * [Programación: Pulsadores](#programPulsadores)
     * [Pull-up resistors](#ejempullupPulsador)
     * [Pull-down resistors](#ejempulldownPulsador)
+    * [Arduino Pull-up resistor](#ejemArduinoPullup)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
@@ -394,16 +395,37 @@ resistor.
 Arduino trae un ejemplo. Para verlo, pincha en `File > Examples > 02.Digital >
 Button`.
 
-[Aquí](src/arduino/pullup_pulsador) puedes encontrar un programa similar al
-del ejemplo: es tipo arduino.
+Versiones del programa:
+* [Tipo arduino](src/arduino/pullup_pulsador): similar al del ejemplo que trae
+  el arduino.
+* [v1](src/cpp/pullup_v1): escribimos explícitamente la función `main`.
+* [v2](src/cpp/pullup_v2): usamos la clase LED que habíamos escrito.
 
+Al igual que hemos definido una clase `LED` que estamos reutilizando en todos
+los programas, sería interesante definir una clase `Pulsador` que podamos
+volver a usar en el futuro. ¿Serías capaz de escribirla? Si no ves cómo
+hacerlo mira la versión 3:
+* [v3](src/cpp/clase_pulsador_pullup): escribimos una clase `Pulsador` que
+  podamos reutilizar en otros programas como hacemos con `LED`.
 
 #### Material
 * 1 pulsador
 * 1 resistencia de 10k (o 20k)
 * cables
 
-### <a name="ejempulldownPulsador"></a>Ejemplo: pulsador con pull-down resistor
+### <a name="ejempulldownPulsador"></a>Ejercicio: pulsador con pull-down resistor
+La resistencia del circuito anterior se llama *pull-up* porque cuando el
+pulsador no está apretado fuerza el potencial en el punto donde lo medimos a
+5 voltios (a 1 lógico). Si intercambiamos el pulsador con la resistencia, la
+resistencia fuerza el potencial a 0 voltios. En este caso se llama
+*pull-down*.
+
+Monta el circuito correspondiente y reescribe el programa anterior de acuerdo
+a esta resistencia. En este vídeo puedes encontrar el circuito que tienes que
+montar.
+
+### <a name="ejemArduinoPullup"></a>Ejemplo: Arduino pull-up resistor
+
 
 
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
@@ -642,5 +664,6 @@ Para cotillear:
 * [Efecto de LEDs](src/cpp/luces_v1)
 * [Semáforo v1](src/cpp/semaforo_v1)
 * [Cruce de semáforos v1](src/cpp/cruce_semaforos_v1)
+* [Pulsador con pull-down resistor](src/cpp/pulldown_v1)
 
 
