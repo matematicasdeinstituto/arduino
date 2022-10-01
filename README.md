@@ -40,6 +40,8 @@
     * [Pull-up resistors](#ejempullupPulsador)
     * [Pull-down resistors](#ejempulldownPulsador)
     * [Arduino Pull-up resistor](#ejemArduinoPullup)
+
+* [Ejercicios con pulsadores](#ejerConPulsadores)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
@@ -304,7 +306,10 @@ Posibilidades:
 
 
 ### <a name="semaforo"></a>Ejercicio: Semáforo
-Hacer un semáforo.
+Hacer un semáforo. Un semáforo tiene 3 LEDs: verde, amarillo y rojo. 
+
+Se enciende primero el verde. Espera un tiempo. Pasa a amarillo, espera un
+tiempo. Pasa a rojo, espera un tiempo y vuelve a empezar.
 
 #### Resultado
 [Vídeo con el resultado](https://youtube.com/shorts/RWQUCvbBO7g?feature=share)
@@ -448,8 +453,9 @@ resistencia fuerza el potencial a 0 voltios. En este caso se llama
 *pull-down*.
 
 Monta el circuito correspondiente y reescribe el programa anterior de acuerdo
-a esta resistencia. En este vídeo puedes encontrar el circuito que tienes que
-montar.
+a esta resistencia. Mira el vídeo con el resultado para ver el circuito a
+construir.
+
 
 #### Resultado
 [Vídeo con el resultado](https://youtu.be/aIDDdeC-X5M)
@@ -457,6 +463,7 @@ montar.
 ### <a name="ejemArduinoPullup"></a>Ejemplo: Arduino pull-up resistor
 
 
+## <a name="ejerConPulsadores"></a>Ejercicios con pulsadores
 
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
 
