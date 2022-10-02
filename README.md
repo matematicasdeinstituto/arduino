@@ -40,8 +40,10 @@
     * [Pull-up resistors](#ejempullupPulsador)
     * [Pull-down resistors](#ejempulldownPulsador)
     * [Arduino Pull-up resistor](#ejemArduinoPullup)
+    * [Clase Pulsador](#clasepulsador)
 
 * [Ejercicios con pulsadores](#ejerConPulsadores)
+    * [Teclado de un órgano de 1 tecla](#tecladoOrgano1tecla)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
@@ -461,19 +463,61 @@ construir.
 [Vídeo con el resultado](https://youtu.be/aIDDdeC-X5M)
 
 ### <a name="ejemArduinoPullup"></a>Ejemplo: Arduino pull-up resistor
+Como es bastante habitual el tener que conectar dispositivos de entrada al
+microcontrolador del Arduino, este trae ya internamente un pull-up resistor,
+de tal manera que nos podemos ahorrar la resistencia cuando conectamos el
+pulsador.
+
+Lo único que tenemos que cambiar es la llamada a `pinMode(pin, INPUT)` por
+`pinMode(pin, INPUT_PULLUP)` y eliminar la resistencia conectada al pulsador.
+
+[Aquí](src/cpp/pullup_v3) puedes ver el programa correspondiente. Prueba a
+ejecutarlo.
+
+### <a name="clasePulsador"></a>Ejercicio: clase Pulsador
+Modifica la clase `Pulsador` que habíamos escrito para que funcione siempre
+con la resistencia interna del microcontrolador.
 
 
 ## <a name="ejerConPulsadores"></a>Ejercicios con pulsadores
 
-### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
+### <a name="tecladoOrgano1tecla"></a>Ejercicio: Teclado órgano de 1 tecla
+Conecta un pulsador al arduino de tal manera que cuando se apriete muestre en
+el monitor serie "Do". 
 
+El programa tiene que funcionar de la siguiente forma:
+1. Aprietas el pulsador.
+2. Se muestra **una sola vez** la palabra "Do" en el monitor serie.
+3. Se suelta el pulsador.
+
+y volvemos a empezar. Sencillo, ¿verdad?
+
+
+#### Material
+* 1 pulsadores
+* cables
+
+### <a name="explicacionMiniorgano1"></a>Explicación: Teclado órgano de 1 tecla
+[Aquí](src/cpp/miniorgano_v1) puedes encontrar un primer intento. El problema
+con este programa es que al presionar el pulsador no se escribe un "Do" sino
+que se escribe continuamente Do hasta que se suelta el pulsador.
+
+Tenemos que cambiar la lógica del programa: cuando el pulsador se presiona una
+vez, se imprime "Do", pero una vez que se ha impreso "Do" una vez ya no se
+debe de volver a imprimir. Para ello incluimos una variable `presionado` que
+nos dice si el pulsador está presionado o no.
+
+En la [v2](src/cpp/miniorgano_v2) puedes encontrar el resultado.
+
+
+
+### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
 Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
 pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
-pulsadas.
+pulsadas. Reutiliza la clase `Pulsador` que acabamos de escribir.
 
 #### Material
 * 7 pulsadores
-* Opcional: 7 resistencias de 1k
 * cables
 
 ### <a name="tiempoReaccion"></a>Ejercicio: Midiendo tiempo de reacción
@@ -702,5 +746,6 @@ Para cotillear:
 * [Semáforo v1](src/cpp/semaforo_v1)
 * [Cruce de semáforos v1](src/cpp/cruce_semaforos_v1)
 * [Pulsador con pull-down resistor](src/cpp/pulldown_v1)
+* [Clase Pulsador](src/cpp/clase_pulsador)
 
 

@@ -1,11 +1,11 @@
 #pragma once
 
-#ifndef __PULSADOR_H__
-#define __PULSADOR_H__
+#ifndef __PULSADOR__CON_PULLUP_H__
+#define __PULSADOR__CON_PULLUP_H__
 
-class Pulsador{
+class Pulsador_con_pullup{
 public:
-    Pulsador(int pin_pulsador);
+    Pulsador_con_pullup(int pin_pulsador);
 
     // Devuelve true si está presionado el pulsador. false en caso contrario.
     bool presionado() const;
@@ -23,19 +23,19 @@ private:
 // llames inline.
 // Observa que las funciones inline las escribimos en el archivo de cabecera
 // .h.
-inline Pulsador::Pulsador(int pin_pulsador)
+inline Pulsador_con_pullup::Pulsador_con_pullup(int pin_pulsador)
 		    : pin{pin_pulsador}
 {
     pinMode(pin, INPUT);
 }
 
-inline bool Pulsador::presionado() const
+inline bool Pulsador_con_pullup::presionado() const
 {
     return (digitalRead(pin) == LOW);
 }
 
 
-inline bool Pulsador::no_presionado() const
+inline bool Pulsador_con_pullup::no_presionado() const
 {
     return !presionado();
 }
