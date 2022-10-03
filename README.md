@@ -3,6 +3,8 @@
 * [Primeros pasos](#basico)
     * [Ejercicio: Modificando el tiempo de parpadeo](#tst_blink)
 
+* [Electrónica: básico](#elecBasico)
+
 * [Electrónica: LEDs](#elecLED)
     * [Ejercicio: blink con un LED normal](#tst_blink2)
 
@@ -121,6 +123,15 @@ función le indica el microcontralador que no haga nada (que espere) durante
 pon 2000 ms; ó 500 ms. ¿qué pasa si enciendes y apagas el led durante 10
 ms?
 
+## <a name="elecBasico"></a>Electrónica: básico
+Los siguientes vídeos son una introducción básica a la electrónica:
+* [Breadboards](https://youtu.be/2Z5Uf695iRs)
+* [Cables](https://youtu.be/v1DFYv1s34Q)
+* [Componentes electŕonicos básicos](https://youtu.be/7U78iw5pG64)
+* [Pilas](https://youtu.be/GwNezJgIQcU)
+* [Pines de GND,5V y 3.3V del arduino](https://youtu.be/Vsvkc_RkaXQ)
+* [Fuente alternativa de alimentación](https://youtu.be/SeGhZ36l0Kw)
+
 
 ## <a name="elecLED"></a>Electrónica: circuito con un LED
 El problema con el LED que trae el microcontrolador es que es muy pequeño y
@@ -128,6 +139,9 @@ apenas se ve. Hagamos un circuito con un LED más grande.
 
 Se puede conectar el LED directamente a una pila o a la salida de los 5V del
 Arduino.
+
+En el siguiente [vídeo](https://youtu.be/KABDQgGnzzE) puedes encontrar una
+explicación del circuito a montar.
 
 ### Material
 * 1 LED
@@ -375,10 +389,14 @@ interruptor se queda en la posición nueva a la que has cambiado. Los
 pulsadores son parecidos a los interruptores salvo con la diferencia de que
 cuando los sueltas el pulsador vuelve a la posición inicial en la que estaba.
 
-Veamos cómo funciona un pulsador. Para ello, haz el siguiente circuito:
-conecta un LED a una pila (o a los 5V de salida del Arduino) y un pulsador de
-tal manera que el LED esté encendido cuando pulses el pulsador. No te olvides
-de poner la resistencia correspondiente para no quemar el LED.
+[Este vídeo](https://youtu.be/AkVQ5Dq2lvc) muestra cómo se conecta un
+pulsador.
+
+Para ver cómo funciona un pulsador vamos a hacer un circuito básico:
+conectemos un LED a un pulsador de tal manera que al presionarlo se encienda
+el LED. [Aquí](https://youtu.be/3TEm4HDfCIk) puedes encontrar una breve
+explicación.
+
 
 #### Resultado
 [Vídeo con el resultado](https://youtu.be/aNBpg-pQGZ4)
