@@ -1,3 +1,9 @@
+# Links vídeos rotos
+Gracias a la política de violación de la privacidad de Google/YouTube me han
+bloqueado el canal donde estaba subiendo los vídeos, así que de momento los
+links con los vídeos no funcionan. Los actualizaré en los próximos días.
+RECORDAR: evitar usar Google, YouTube, ... si valoras tu privacidad.
+
 # Tutorial básico de Arduino
 
 * [Primeros pasos](#basico)
@@ -161,7 +167,7 @@ persistencia de la imagen en la retina?
 
 ### Material
 * 1 LED
-* 1 resistencia 1K (la típica suele ser de 330 ohms)
+* 1 resistencia 1k (la típica suele ser de 330 ohms)
 * Cables
 
 ## <a name="holaMundo"></a>Primer programa: hola, mundo!
@@ -764,6 +770,6 @@ Para cotillear:
 * [Semáforo v1](src/cpp/semaforo_v1)
 * [Cruce de semáforos v1](src/cpp/cruce_semaforos_v1)
 * [Pulsador con pull-down resistor](src/cpp/pulldown_v1)
-* [Clase Pulsador](src/cpp/clase_pulsador)
+* [Clase Pulsador](src/cpp/clase_pulsador_v1)
 
 
