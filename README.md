@@ -641,10 +641,6 @@ haría que el programa funcionase de forma incorrecta.
 `switch` que evita el olvido del `break`. 
 
 
-Vamos a mejorar la clase `Pulsador`. El problema con la clase versión 1 de la
-clase `Pulsador` es que no recuerda el estado en que se encontraba el pulsador
-la última vez que miramos a ver si estaba o no presionado.
-
 
 ## <a name="programEnum"></a>Programación: enum
 Uno de los problemas con el programa anterior es que estamos escribiendo 1, 2,
