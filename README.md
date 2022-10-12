@@ -1,9 +1,3 @@
-# Links vídeos rotos
-Gracias a la política de violación de la privacidad de Google/YouTube me han
-bloqueado el canal donde estaba subiendo los vídeos, así que de momento los
-links con los vídeos no funcionan. Los actualizaré en los próximos días.
-RECORDAR: evitar usar Google, YouTube, ... si valoras tu privacidad.
-
 # Tutorial básico de Arduino
 
 * [Primeros pasos](#basico)
@@ -86,6 +80,7 @@ RECORDAR: evitar usar Google, YouTube, ... si valoras tu privacidad.
 
 * [Soluciones ejercicios](#tagSoluciones)
 
+* [Problemas a la hora de subir videos](#problemasVideos)
 
 ## <a name="basico"></a>Primeros pasos
 
@@ -772,4 +767,12 @@ Para cotillear:
 * [Pulsador con pull-down resistor](src/cpp/pulldown_v1)
 * [Clase Pulsador](src/cpp/clase_pulsador_v1)
 
+
+## <a name="problemasVideos"></a>Problemas a la hora de subir videos
+Al principio decidí subir todos los vídeos a YouTube. Sin embargo, después de
+haber subido unos 30 vídeos cortos Google/YouTube me bloquearon el canal
+diciendo que violaba su política. Parece ser que YouTube debe de estar en
+contra de que se suban videos educativos de electrónica en español.
+
+Como consecuencia del bloqueo he empezado a probar en Odysee.
 
