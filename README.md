@@ -666,7 +666,7 @@ que teníamos con la versión 1 es que no podíamos saber si el pulsador estaba
 pulsado o no. Añadamos un estado al `Pulsador` que nos permita consultar si 
 el pulsador estaba ya pulsado o no.
 
-[Aquí](src/cpp/clase_pulsador_v2.ino) puedes encontrar la clase
+[Aquí](src/cpp/clase_pulsador_v2) puedes encontrar la clase
 correspondiente.
 
 
