@@ -648,7 +648,7 @@ Uno de los problemas con el programa anterior es que estamos escribiendo 1, 2,
 que recordar que 1 significa 'lunes', 2 'martes', ... 
 
 La regla es intentar que el código sea lo más legible posible.
-[Aquí](src/enum_v1.ino) puedes encontrar el mismo programa pero más legible.
+[Aquí](src/cpp/enum_v1.ino) puedes encontrar el mismo programa pero más legible.
 Para ello hemos definido 7 variables que indican el día de la semana. Observar
 que en el programa así escrito el programador no tiene que recordar si el
 `jueves' es el 4 ó el 5, simplificando la escritura y evitando errores.
@@ -656,7 +656,7 @@ que en el programa así escrito el programador no tiene que recordar si el
 ### enums
 Podemos simplificar el programa usando una enumeración. A fin de cuentas
 estamos enumerando los días de la semana del 1 al 7. C++ suministra las `enum`
-para simplificar. [Aquí](src/enum_v2.ino) puedes encontrar el mismo programa
+para simplificar. [Aquí](src/cpp/enum_v2.ino) puedes encontrar el mismo programa
 usando `enum`. 
 
 
