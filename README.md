@@ -131,12 +131,12 @@ ms?
 
 ## <a name="elecBasico"></a>Electrónica: básico
 Los siguientes vídeos son una introducción básica a la electrónica:
-* [Breadboards](https://youtu.be/2Z5Uf695iRs)
-* [Cables](https://youtu.be/v1DFYv1s34Q)
-* [Componentes electŕonicos básicos](https://youtu.be/7U78iw5pG64)
-* [Pilas](https://youtu.be/GwNezJgIQcU)
-* [Pines de GND,5V y 3.3V del arduino](https://youtu.be/Vsvkc_RkaXQ)
-* [Fuente alternativa de alimentación](https://youtu.be/SeGhZ36l0Kw)
+* [Breadboards](https://odysee.com/@fisicadeinstituto:c/breadboard:b0)
+* [Cables](https://odysee.com/@fisicadeinstituto:c/cables:7)
+* [Componentes electŕonicos básicos](https://odysee.com/@fisicadeinstituto:c/componentes_electricos:3)
+* [Pilas](https://odysee.com/@fisicadeinstituto:c/pilas:c)
+* [Pines de GND,5V y 3.3V del arduino](https://odysee.com/@fisicadeinstituto:c/pines_arduino_5V:0)
+* [Fuente alternativa de alimentación](https://odysee.com/@fisicadeinstituto:c/dc2dc:e)
 
 
 ## <a name="elecLED"></a>Electrónica: circuito con un LED
@@ -146,7 +146,7 @@ apenas se ve. Hagamos un circuito con un LED más grande.
 Se puede conectar el LED directamente a una pila o a la salida de los 5V del
 Arduino.
 
-En el siguiente [vídeo](https://youtu.be/KABDQgGnzzE) puedes encontrar una
+En el siguiente [vídeo](https://odysee.com/@fisicadeinstituto:c/circuito_led:2) puedes encontrar una
 explicación del circuito a montar.
 
 ### Material
@@ -162,7 +162,7 @@ tiempo no eres capaz de ver que parpadean los LEDs? ¿Sabes lo que es la
 persistencia de la imagen en la retina? 
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/QNWXKy1bohM)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/blink:0)
 
 
 ### Material
@@ -233,7 +233,7 @@ Hagamos un programa que genere un efecto parecido.
   código.
 
 #### Resultado
-[Vídeo con el resultado](https://youtube.com/shorts/4Bjh7ld3DgI?feature=share)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/coche_fantastico:c)
 
 ## <a name="programFor1"></a>Programación: bucles for
 * [Iteramos usando `while`](src/cpp/for01)
@@ -266,7 +266,7 @@ El programa tiene que contener las siguientes funciones:
 * `leds_parpadea(int n)`: parpadea `n` veces.
 
 #### Resultado
-[Vídeo con el resultado](https://youtube.com/shorts/-WwpDeqQ2Bs?feature=share)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/leds_parpadeando01:b)
 
 #### Material
 * 8 LEDs
@@ -318,8 +318,8 @@ Posibilidades:
 
 
 #### Resultado
-[Vídeo con el resultado (1)](https://youtu.be/BzOcOpxq_XI)
-[Vídeo con el resultado (2)](https://youtu.be/GPrpHbzgl1Q)
+[Vídeo con el resultado (1)](https://odysee.com/@fisicadeinstituto:c/efecto_leds01:6)
+[Vídeo con el resultado (2)](https://odysee.com/@fisicadeinstituto:c/efecto_leds02:d)
 
 #### Material
 * 6-8 LEDs
@@ -334,7 +334,7 @@ Se enciende primero el verde. Espera un tiempo. Pasa a amarillo, espera un
 tiempo. Pasa a rojo, espera un tiempo y vuelve a empezar.
 
 #### Resultado
-[Vídeo con el resultado](https://youtube.com/shorts/RWQUCvbBO7g?feature=share)
+[Vídeo con el resultado (ROTO)](https://youtube.com/shorts/RWQUCvbBO7g?feature=share)
 
 #### Material
 * 1 LED rojo
@@ -387,7 +387,7 @@ Haz un cruce con 2 semáforos. Cuando uno de los semáforos está en verde, el
 otro está en rojo. Usa la clase Semaforo del ejemplo anterior.
 
 #### Resultado
-[Vídeo con el resultado](https://youtube.com/shorts/VMj2FK9vXhA?feature=share)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/cruce_semaforos_v01:9)
 
 ## <a name="elePulsadores"></a>Electrónica: Pulsadores
 Cuando pulsas el interruptor de la luz para entrar en una habitación el
@@ -395,17 +395,17 @@ interruptor se queda en la posición nueva a la que has cambiado. Los
 pulsadores son parecidos a los interruptores salvo con la diferencia de que
 cuando los sueltas el pulsador vuelve a la posición inicial en la que estaba.
 
-[Este vídeo](https://youtu.be/AkVQ5Dq2lvc) muestra cómo se conecta un
+[Este vídeo](https://odysee.com/@fisicadeinstituto:c/pulsador_intro:4) muestra cómo se conecta un
 pulsador.
 
 Para ver cómo funciona un pulsador vamos a hacer un circuito básico:
 conectemos un LED a un pulsador de tal manera que al presionarlo se encienda
-el LED. [Aquí](https://youtu.be/3TEm4HDfCIk) puedes encontrar una breve
+el LED. [Aquí](https://odysee.com/@fisicadeinstituto:c/circuito_pulsador:9) puedes encontrar una breve
 explicación.
 
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/aNBpg-pQGZ4)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/pulsador01:5)
 
 ### Material
 * 1 LED
@@ -418,14 +418,14 @@ Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
 encienda cuando cualquiera de los 2 pulsadores se presione.
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/pxFBEQX47rM)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/pulsador_or:1)
 
 ### <a name="puertaAND"></a>Ejercicio: puerta AND
 Conecta un LED (con la resistencia) a 2 pulsadores de tal manera que el LED se
 encienda únicamente cuando los dos pulsadores estén pulsados a la vez.
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/scgejITpFwk)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/pulsador_and:1)
 
 
 ## <a name="programPulsadores"></a>Programación: Pulsadores
@@ -463,7 +463,7 @@ hacerlo mira la versión 3:
   podamos reutilizar en otros programas como hacemos con `LED`.
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/K8IfUYAIUBk)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/pulsador_pull_up:6)
 
 
 #### Material
@@ -484,7 +484,7 @@ construir.
 
 
 #### Resultado
-[Vídeo con el resultado](https://youtu.be/aIDDdeC-X5M)
+[Vídeo con el resultado](https://odysee.com/@fisicadeinstituto:c/pulsador_pull_down:2)
 
 ### <a name="ejemArduinoPullup"></a>Ejemplo: Arduino pull-up resistor
 Como es bastante habitual el tener que conectar dispositivos de entrada al
