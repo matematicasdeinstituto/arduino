@@ -1,7 +1,7 @@
 // Autor: matematicasdeinstituto
 // Web  : https://github.com/matematicasdeinstituto/arduino
 
-#include "pulsador.h"
+#include "pulsador_v1.h"
 
 // Conexiones
 // Los pines 1 y 2 no se pueden usar cuando uses el monitor serie, ya que son

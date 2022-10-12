@@ -44,8 +44,21 @@
     * [Arduino Pull-up resistor](#ejemArduinoPullup)
     * [Clase Pulsador](#clasepulsador)
 
-* [Ejercicios con pulsadores](#ejerConPulsadores)
-    * [Teclado de un órgano de 1 tecla](#tecladoOrgano1tecla)
+* [Ejercicios con pulsadores (1)](#ejerConPulsadores1)
+    * [Miniórgano](#tecladoOrgano1tecla)
+    * [Explicación: miniórgano](#explicacionMiniorgano1)
+
+* [Programación: switchs](#programSwitch)
+    * [switch](#explicacionSwitch)
+    * [Mejora escritura de switch](#mejoraSwitch)
+
+* [Programación: enum](#programEnum)
+    * [Clase pulsador v2](#clasePulsadorv2)
+    * [Miniorgano v3](#ejerMiniorgano3)
+    * [Miniorgano v4](#ejerMiniorgano4)
+
+----
+* [Ejercicios con pulsadores (2)](#ejerConPulsadores2)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
@@ -498,9 +511,9 @@ Modifica la clase `Pulsador` que habíamos escrito para que funcione siempre
 con la resistencia interna del microcontrolador.
 
 
-## <a name="ejerConPulsadores"></a>Ejercicios con pulsadores
+## <a name="ejerConPulsadores1"></a>Ejercicios con pulsadores (1)
 
-### <a name="tecladoOrgano1tecla"></a>Ejercicio: Teclado órgano de 1 tecla
+### <a name="tecladoOrgano1tecla"></a>Ejercicio: Miniórgano de 1 tecla
 Conecta un pulsador al arduino de tal manera que cuando se apriete muestre en
 el monitor serie "Do". 
 
@@ -516,7 +529,8 @@ y volvemos a empezar. Sencillo, ¿verdad?
 * 1 pulsadores
 * cables
 
-### <a name="explicacionMiniorgano1"></a>Explicación: Teclado órgano de 1 tecla
+
+### <a name="explicacionMiniorgano1"></a>Explicación: Miniórgano de 1 tecla
 [Aquí](src/cpp/miniorgano_v1) puedes encontrar un primer intento. El problema
 con este programa es que al presionar el pulsador no se escribe un "Do" sino
 que se escribe continuamente Do hasta que se suelta el pulsador.
@@ -528,6 +542,164 @@ nos dice si el pulsador está presionado o no.
 
 En la [v2](src/cpp/miniorgano_v2) puedes encontrar el resultado.
 
+
+## <a name="programSwitch"></a>Programación: switchs 
+### <a name="explicacionSwitch"></a>Explicación: switch
+Imagina que escribes un programa donde en una variable `int dia` te dan el día
+de la semana y quieres imprimir el día. Para ello escribirías código similar
+a:
+
+```
+if (dia == 1)
+    Serial.println("lunes");
+
+else if (dia == 2)
+    Serial.println("martes");
+
+else if (dia == 3)
+    Serial.println("miércoles");
+
+else if (dia == 4)
+    Serial.println("jueves");
+
+else if (dia == 5)
+    Serial.println("viernes");
+
+else if (dia == 6)
+    Serial.println("sábado");
+
+else if (dia == 7)
+    Serial.println("domingo");
+```
+
+C++ suministra una forma más sencilla de escribir lo anterior: usar `switch`.
+El código anterior quedaría:
+
+```
+switch (dia){ 
+    case 1:	
+	Serial.println("lunes");
+	break;
+
+    case 2:
+	Serial.println("martes");
+	break;
+
+    case 3:
+	Serial.println("miércoles");
+	break;
+
+    case 4:
+	Serial.println("jueves");
+	break;
+
+    case 5:
+	Serial.println("viernes");
+	break;
+
+    case 6:
+	Serial.println("sábado");
+	break;
+
+    case 7:
+	Serial.println("domingo");
+	break;
+}
+```
+
+Dependiendo del valor que tenga `dia` se ejecutará una parte del programa u
+otra. En el caso de que valga 1 (`case 1:`) se ejecutará todo lo que vaya
+desde después del `case 1:` hasta el `break`.
+
+En general:
+```
+switch(vble){
+    case 1:
+	// código a ejecutar en caso de que vble == 1
+	break;
+
+    case 2:
+	// código a ejecutar en caso de que vble == 2
+	break;
+
+    case 3:
+	// código a ejecutar en caso de que vble == 3
+	break;
+
+    ...
+}
+```
+
+[Aquí](src/cpp/switch_v1) puedes encontrar el programa anterior. Prueba a
+jugar con él.
+
+
+### <a name="mejoraSwitch"></a>Mejora escritura de switch
+Es fácil olvidar algún `break` a la hora de escribir los `switch` lo cual
+haría que el programa funcionase de forma incorrecta. 
+[Aquí](src/cpp/switch_v2) puedes encontrar una forma diferente de escribir
+`switch` que evita el olvido del `break`. 
+
+
+Vamos a mejorar la clase `Pulsador`. El problema con la clase versión 1 de la
+clase `Pulsador` es que no recuerda el estado en que se encontraba el pulsador
+la última vez que miramos a ver si estaba o no presionado.
+
+
+## <a name="programEnum"></a>Programación: enum
+Uno de los problemas con el programa anterior es que estamos escribiendo 1, 2,
+3, ... en los `case`. No es un programa que sea fácil de leer, ya que tienes
+que recordar que 1 significa 'lunes', 2 'martes', ... 
+
+La regla es intentar que el código sea lo más legible posible.
+[Aquí](src/enum_v1.ino) puedes encontrar el mismo programa pero más legible.
+Para ello hemos definido 7 variables que indican el día de la semana. Observar
+que en el programa así escrito el programador no tiene que recordar si el
+`jueves' es el 4 ó el 5, simplificando la escritura y evitando errores.
+
+### enums
+Podemos simplificar el programa usando una enumeración. A fin de cuentas
+estamos enumerando los días de la semana del 1 al 7. C++ suministra las `enum`
+para simplificar. [Aquí](src/enum_v2.ino) puedes encontrar el mismo programa
+usando `enum`. 
+
+
+### <a name="clasePulsadorv2"></a>Clase pulsador v2
+Usemos `enum` y `switch` para mejorar nuestra clase `Pulsador`. El problema
+que teníamos con la versión 1 es que no podíamos saber si el pulsador estaba
+pulsado o no. Añadamos un estado al `Pulsador` que nos permita consultar si 
+el pulsador estaba ya pulsado o no.
+
+[Aquí](src/cpp/clase_pulsador_v2.ino) puedes encontrar la clase
+correspondiente.
+
+
+### <a name="ejerMiniorgano3"></a>Ejercicio: miniorgano v3
+Reescribe el programa del miniórgano usando la versión 2 del `Pulsador`.
+
+### <a name="ejerMiniorgano4"></a>Ejercicio: miniorgano v4
+En la versión 3 del miniórgano aparece la línea:
+
+```
+if (pulsador.estado() == Pulsador_estado::recien_pulsado)
+```
+
+que es demasiado larga. Es más natural de escribir
+
+```
+if (pulsador.recien_pulsado())
+```
+
+más corto y sencillo de leer.
+
+Modifica la clase `Pulsador` y el programa añadiendo la función
+`Pulsador::recien_pulsado()`. Y ya que estamos añade por consistencia las
+siguientes funciones a la clase pulsador:
+
+* `bool recien_pulsado();`
+* `bool sigue_pulsado();`
+* ` bool recien_soltado();`
+* `bool sigue_soltado();`
 
 
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
@@ -766,6 +938,8 @@ Para cotillear:
 * [Cruce de semáforos v1](src/cpp/cruce_semaforos_v1)
 * [Pulsador con pull-down resistor](src/cpp/pulldown_v1)
 * [Clase Pulsador](src/cpp/clase_pulsador_v1)
+* [Miniorgano v3](src/cpp/miniorgano_v3)
+* [Miniorgano v4](src/cpp/miniorgano_v4)
 
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos

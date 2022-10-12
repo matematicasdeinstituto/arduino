@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef __PULSADOR_H__
-#define __PULSADOR_H__
+#ifndef __PULSADOR_V1_H__
+#define __PULSADOR_V1_H__
 
 class Pulsador{
 public:
