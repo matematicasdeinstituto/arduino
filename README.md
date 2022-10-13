@@ -13,6 +13,10 @@
 * [Programación: funciones (1)](#programFunciones1)
     * [Ejercicio: Valor de un polinomio](#valorPolinomio)
 
+* [Programación: leyendo del monitor serie](#programSerialRead)
+    * [ASCII](#programASCII)
+    * [Tipo: char](#programtipoChar)
+
 * [Programación: tipos básicos en C++](#programTypes)
     
 * [Programación: funciones (2)](#programFunciones2)
@@ -56,10 +60,16 @@
     * [Clase pulsador v2](#clasePulsadorv2)
     * [Miniorgano v3](#ejerMiniorgano3)
     * [Miniorgano v4](#ejerMiniorgano4)
-
-----
-* [Ejercicios con pulsadores (2)](#ejerConPulsadores2)
     * [Teclado de un órgano](#tecladoOrgano)
+
+* [Programación: midiendo tiempo y tipos de enteros](#programTime)
+    * [Reloj v1](#relojv1)
+    * [Conversión de `ms` a `hh::mm::ss`](#relojv2)
+
+
+---------
+
+* [Ejercicios con pulsadores (2)](#ejerConPulsadores2)
     * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
 
@@ -211,6 +221,69 @@ Para ello crea una función que:
 *Ayuda: para sumarle 1 a una variable lo más eficiente es escribir `++x`. Para
 sumarle 10, puedes escribir `x = x + 10`, aunque suele ser más eficiente `x +=
 10`*
+
+## <a name="programSerialRead"></a>Programación: leyendo del monitor serie
+Como lo más normal es cometer errores a la hora de programar, es fundamental
+desarrollar métodos para probar todo el código que estamos escribiendo.
+
+Una forma de probar que la función que acabamos de implementar es correcta es
+hacer que el programa pida números al usuario y calcule el valor del polinomio
+correspondiente. Para ello necesitamos aprender cómo leer.
+
+[Aquí](src/cpp/serial_read_v1) puedes encontrar un programa que se limita a
+leer del monitor serie imprimiendo lo que has escrito.
+
+Como puedes observar `Serial.read()` devuelve un `int`. ¿Cómo lo sé?
+Consultando la documentación. En la página de arduino puedes encontrar toda la
+ayuda que necesitas. Cotillea la ayuda de
+[Serial.read()](https://www.arduino.cc/reference/en/language/functions/communication/serial/read/)
+Como puedes ver en la sección del `return` indica que devuelve un `int`.
+Además observa que en la documentación puedes encontrar un ejemplo de cómo se
+usa la función.
+
+
+### <a name="programASCII"></a>ASCII
+Nada más que se prueba el programa anterior se observa algo bastante raro:
+* Al escribir una `a` el programa dice que hemos escrito `97`!!!
+* Si escribes una `b`, `98`; si una `c`, 99, ...
+* Si escribes un `1` el programa dice que hemos escrito `49`. Absurdo!!!
+
+¿qué es lo que está ocurriendo? Lo que ocurre es que cuando escribimos una `a`
+en el ordenador, el ordenador realmente almacena internamente el byte de valor
+en decimal `97`. 
+
+En la memoria de un ordenador solo podemos escribir bytes, y los bytes
+básicamente son números. ¿Cómo podemos almacenar letras? La idea genial es
+asignar a cada número un carácter (= letra). En principio se podía haber
+asignado `a = 0`,  `b = 1`, ... El decir qué valor corresponde a cada letra se
+llama codificación. La codificación más difundida inicialmente fue la que se
+conoce como ASCII. En la
+[wikipedia](https://en.wikipedia.org/wiki/ASCII#Printable_characters)
+puedes encontrar la forma concreta como se codifican las letras. Observa que
+en la tabla se ve que `95` corresponde a una `a` tal y como nos dice el
+ordenador.
+
+### <a name="programtipoChar"></a>Programación: tipo char
+[Aquí](src/cpp/serial_read_v2) puedes encontrar el programa modificado de tal
+manera que ahora sí imprime correctamente lo que escribimos.
+
+¿Qué modificación hemos hecho? Hemos cambiado el tipo devuelto `int` por
+`char`. Un `char` es un tipo básico de C++. Lo habitual es que sea de 1 byte.
+Cuando decimos que un byte es de tipo `char` cuando lo imprimamos se imprimirá
+como carácter y no como número entero. Esto es, 
+```
+char c = 65;	// el valor del byte c es 65
+Serial.println(c); // como c es de tipo 'char' no se imprime 65 sino 'A'
+
+int i = 65;    // el valor del byte i es 65
+Serial.println(i); // como i es de tipo 'int' se imprime 65
+
+```
+
+[Aquí](src/cpp/char_type) tienes el programa anterior. Prueba a jugar a
+cambiar los valores de `c` y de `i` comparándolos con la tabla ASCII dada en
+la wikipedia.
+
 
 ## <a name="programTypes"></a>Programación: tipos básicos en C++
 Un `int` en C++ representa un número entero (números positivos y negativos),
@@ -666,7 +739,7 @@ que teníamos con la versión 1 es que no podíamos saber si el pulsador estaba
 pulsado o no. Añadamos un estado al `Pulsador` que nos permita consultar si 
 el pulsador estaba ya pulsado o no.
 
-[Aquí](src/cpp/clase_pulsador_v2) puedes encontrar la clase
+[Aquí](src/cpp/clase_pulsador_v20) puedes encontrar la clase
 correspondiente.
 
 
@@ -718,6 +791,83 @@ tiempo que tarda en reaccionar la persona mostrándolo en el monitor serie.
 * 3 resistencias 1k
 * 1 pulsador
 
+
+## <a name="programTime"></a>Programación: midiendo tiempo
+Arduino trae incorporada la función `millis` que devuelve el número de
+milisegundos transcurridos desde que se encendió el microcontrolador.
+
+La función `millis` devuelve un `unsigned long`. Este es un nuevo tipo de
+entero.
+
+### Tipos de enteros en C++
+En C++ se definen los siguientes tipos básicos de enteros: 
+* `short`, entero que al menos tiene 16 bits.
+* `int`, este es el entero a usar por defecto. De mínimo 16 bits.
+* `long`, entero de al menos 32 bits.
+* `long long`, entero de al menos 64 bits.
+
+Como ves la diferencia entre los diferentes tipos de enteros es el tamaño en
+bits mínimo que tienen. En general, como estamos empezando, por defecto usa
+siempre `int` salvo que alguna función, como `millis` devuelva explícitamente
+otro tipo.
+
+Además, los enteros pueden ser de dos tipos:
+* `signed`, enteros con signo. Si no se pone nada el tipo definido es
+  `signed`.
+* `unsigned`, enteros sin signo.
+
+**Advertencia: los tipos `unsigned` se crearon porque inicialmente los
+ordenadores tenían poca memoria y el rango de valores positivos que admiten es
+mayor que el rango de valores del mismo tipo pero `signed`. Sin embargo,
+generan muchos problemas y dan muchos dolor de cabeza. Hasta tal punto que
+cada vez se oye más el consejo de evitar usarlos (salvo que no se pueda no
+usarlos). Resumiendo: cuando definas un entero por defecto defínelo siempre
+como `int`**
+
+### <a name="relojv1"></a>Ejemplo: Reloj v1
+Usando la función `millis` hagamos un reloj básico. [Aquí](src/cpp/reloj_v1)
+puedes encontrar un primer intento. 
+
+Como puedes ver es un intento fallido ya que estamos dando la hora en
+milisegundos. En lugar de poner `00:01:00` que sería que ha transcurrido 1
+minuto desde que se encendió el microcontrolador ponemos `60000`, lo cual es
+completamente ilegible.
+
+### <a name="relojv2"></a>Ejercicio: conversión de `ms` a `hh:mm:ss`
+Modifiquemos la versión 1 del reloj para que muestre la hora como
+`hh:mm:ss`. 
+
+El problema lo podemos descomponer en dos partes:
+1. Dado un tiempo en milisegundos averiguar cuántas horas, minutos y segundos
+   tiene.
+2. Imprimir esos números en formato `hh:mm:ss`. 
+
+La segunda parte debería de ser sencilla. Veamos cómo hacer la primera.
+
+Si quieres programar un ordenador para hacer algo, lo primero que tienes que
+saber es cómo hacerlo tú a mano. Si tu no sabes pasar de milisegundos a horas,
+minutos y segundos va a ser imposible que puedas programar el arduino para que
+lo haga por ti.
+
+Para ello te propongo los siguientes problemas (y sí, son problemas básicos de
+matemáticas; si programas un microcontrolador te vas a encontrar
+sistemáticamente con problemas de este tipo que tienes que saber resolver).
+
+Cuando abordes un problema nuevo intenta empezar siempre con problemas
+sencillos. Por ello, en lugar de usar milisegundos usemos segundos con los que
+estamos más familiarizados:
+
+
+* A mano (puedes usar una calculadora):
+  1. Calcula los segundos que hay en 2horas 3minutos y 50segundos.
+  2. Descompón 16.525 segundos en horas, minutos y segundos.
+
+Recuerda que lo importante es que te fijes en el método, ya que el método es
+lo que tienes que programar.
+
+
+
+ 
 ### <a name="semaforoPeatones"></a>Ejercicio: Semáforo de peatones
 En una calle hay un paso de cebra regulado por un semáforo. El semáforo
 siempre está verde para los coches excepto cuando llega un peaton y pulsa un
@@ -936,6 +1086,7 @@ Para cotillear:
 * [Clase Pulsador](src/cpp/clase_pulsador_v1)
 * [Miniorgano v3](src/cpp/miniorgano_v3)
 * [Miniorgano v4](src/cpp/miniorgano_v4)
+* [Organo_v1](src/cpp/organo_v1)
 
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos

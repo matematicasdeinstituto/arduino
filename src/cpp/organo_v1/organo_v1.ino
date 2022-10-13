@@ -1,7 +1,7 @@
 // Autor: matematicasdeinstituto
 // Web  : https://github.com/matematicasdeinstituto/arduino
 
-#include "pulsador_v1.h"
+#include "pulsador_v2.h"
 
 // Conexiones
 // Los pines 1 y 2 no se pueden usar cuando uses el monitor serie, ya que son
@@ -33,25 +33,25 @@ int main()
     Pulsador pulsador6{pin_pulsador6};
 
     while(true){
-        if (pulsador0.presionado())
+        if (pulsador0.recien_pulsado())
             Serial.println("Do");
 
-        if (pulsador1.presionado())
+        if (pulsador1.recien_pulsado())
             Serial.println("Re");
 
-        if (pulsador2.presionado())
+        if (pulsador2.recien_pulsado())
             Serial.println("Mi");
 
-        if (pulsador3.presionado())
+        if (pulsador3.recien_pulsado())
             Serial.println("Fa");
 
-        if (pulsador4.presionado())
+        if (pulsador4.recien_pulsado())
             Serial.println("Sol");
 
-        if (pulsador5.presionado())
+        if (pulsador5.recien_pulsado())
             Serial.println("La");
 
-        if (pulsador6.presionado())
+        if (pulsador6.recien_pulsado())
             Serial.println("Si");
 
     }

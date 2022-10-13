@@ -28,19 +28,12 @@ class Pulsador{
 public:
     Pulsador(int pin_pulsador);
 
-// Estados
     // Devuelve el estado en el que se encuentra el pulsador desde la última
     // vez que se miró.
     // Observar que esta función no es `const` ya que va a modificar el
     // estado.
     Pulsador_estado estado();
-    
-    bool recien_pulsado();
-    bool sigue_pulsado();
-    bool recien_soltado();
-    bool sigue_soltado();
 
-// Mirando cómo esta el pulsador justo en este momento
     // Devuelve true si está presionado el pulsador. false en caso contrario.
     bool presionado() const;
 
@@ -75,25 +68,15 @@ inline Pulsador::Pulsador(int pin_pulsador)
 }
 
 
-// Observar que aquí uso un estilo diferente para escribir las funciones
-// `inline`. 
 inline bool Pulsador::presionado() const
-{ return (digitalRead(pin) == LOW); }
+{
+    return (digitalRead(pin) == LOW);
+}
 
 inline bool Pulsador::no_presionado() const
-{ return !presionado(); }
-
-inline bool Pulsador::recien_pulsado()
-{ return (estado() == Pulsador_estado::recien_pulsado); }
-
-inline bool Pulsador::sigue_pulsado()
-{ return (estado() == Pulsador_estado::sigue_pulsado); }
-
-inline bool Pulsador::recien_soltado()
-{ return (estado() == Pulsador_estado::recien_soltado); }
-
-inline bool Pulsador::sigue_soltado()
-{ return (estado() == Pulsador_estado::sigue_soltado); }
+{
+    return !presionado();
+}
 
 
 #endif
