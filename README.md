@@ -118,7 +118,7 @@ acompañar a un curso presencial. Eso hace que el curso que encuentres aquí no
 esté completo: faltan explicaciones que pretendo hacer en persona. Con todo,
 como suministro todos los ejemplos y ejercicios resueltos, cualquiera que
 tenga interés y se tome la molestia de buscar en internet lo que no está
-explicado aquí le podrá sacar bastante partido.
+explicado aquí, le podrá sacar bastante partido.
 
 Como puedes ver el proyecto tiene licencia GPL-3.0. Esto quiere decir que no
 es necesario que robes el código: es gratuito, puedes hacer lo que quieras con
@@ -129,7 +129,8 @@ programa tiene errores, y lo usas en algún sitio, a mi no me
 busques. El código se suministra tal y como está: sin garantías de ningún
 tipo.
 
-
+[Web](https://github.com/matematicasdeinstituto/arduino)
+Autor: Matemáticas de Instituto
 
 
 ## <a name="basico"></a>Primeros pasos
