@@ -1,5 +1,7 @@
 # Tutorial básico de Arduino
 
+* [Introducción](#introduccion)
+
 * [Primeros pasos](#basico)
     * [Ejercicio: Modificando el tiempo de parpadeo](#tst_blink)
 
@@ -104,6 +106,31 @@
 * [Soluciones ejercicios](#tagSoluciones)
 
 * [Problemas a la hora de subir videos](#problemasVideos)
+
+* [C ó C++](#cversuscpp)
+
+* [¿Por dónde seguir?](#porDondeSeguir)
+
+
+## <a name="introduccion"></a>Introducción
+Las notas que vas a encontrar a continuación son eso: notas que pretenden
+acompañar a un curso presencial. Eso hace que el curso que encuentres aquí no
+esté completo: faltan explicaciones que pretendo hacer en persona. Con todo,
+como suministro todos los ejemplos y ejercicios resueltos, cualquiera que
+tenga interés y se tome la molestia de buscar en internet lo que no está
+explicado aquí le podrá sacar bastante partido.
+
+Como puedes ver el proyecto tiene licencia GPL-3.0. Esto quiere decir que no
+es necesario que robes el código: es gratuito, puedes hacer lo que quieras con
+él (salvo venderlo, quedaría feo robarle el trabajo a otro y sacarle tú
+dinero). Lo único que no puedes hacer es borrar las menciones de dónde has
+sacado todo este material. Por lo demás, úsalo como quieras. Eso si: si algún
+programa tiene errores, y lo usas en algún sitio, a mi no me
+busques. El código se suministra tal y como está: sin garantías de ningún
+tipo.
+
+
+
 
 ## <a name="basico"></a>Primeros pasos
 
@@ -1096,4 +1123,55 @@ diciendo que violaba su política. Parece ser que YouTube debe de estar en
 contra de que se suban videos educativos de electrónica en español.
 
 Como consecuencia del bloqueo he empezado a probar en Odysee.
+
+## <a name="cversuscpp"></a>C ó C++
+### Polémica C versus C++
+Los microcontroladores se programan fundamentalmente con dos lenguajes: C ó
+C++. A día de hoy estos son dos lenguajes muy diferentes: un programador de C
+no entiende gran parte del código en C++, y un programador de C++ no es capaz
+de escribir código al estilo de C. 
+
+Cuando encuentres alguna página que te hable de C/C++ no pierdas tiempo
+leyéndola: no saben programar ni en C ni en C++.
+
+Hay muchos programadores de microcontroladores que programan en C. Otros 
+programan en C++. ¿Cuál de los 2 lenguajes es mejor? Ni idea. A mi me gusta
+más C++, pero si prefieres C, usa C. Gusto del consumidor.
+
+### C++
+C++ es un lenguaje que está evolucionando mucho. En el 2011 sufrió un gran
+cambió, introduciendo  nuevos estilos de programación. En el 2020 se ha
+modificado de nuevo, simplificando la programación genérica y añadiendo los
+módulos. 
+
+Esto quiere decir que tienes que tener mucho cuidado de dónde sacar la
+información. En internet hay páginas escritas hace 20 años, páginas escritas
+por gente que se quedó con el estilo de programación de 1995 que aprendió
+cuando eran jóvenes. Si lees esas páginas vas a aprender un estilo totalmente
+anticuado de programar en C++. Ten cuidado: aprende C++ moderno (en el 2023 se
+espera introducir pequeñas mejoras, y cada 3-4 años ir mejorando el lenguaje).
+
+### Recursos para aprender C++
+Si tienes interés en aprender el lenguaje y estar a la última consulta
+[CppCon](https://www.youtube.com/channel/UCMlGfpWw-RUdWX_JbLCukXg). Para
+empezar busca los vídeos 'back to the basics' donde explican los conceptos
+básicos.
+
+El libro de [Stroustrup](https://www.stroustrup.com/programming.html), creador
+del lenguaje de C++, puede ser una buena referencia para aprender el lenguaje.
+En esa misma página puedes encontrar unas cuantas charlas y un montón de
+recursos (aunque suelen ser para gente que ya sabe programar).
+
+
+## <a name="porDondeSeguir"></a>¿Por dónde seguir?
+Un buen libro para aprender a programar directamente un microcontrolador es el
+de *Make: AVR Programming*, de *Elliot Williams* (ISBN: 978-1-449-35578-4). El
+libro programa en C, con la ventaja de programar directamente el
+microcontrolador (por supuesto, está en inglés).
+
+Con todo, si realmente tienes interés sería conveniente que aprendieses a
+programar directamente un ordenador en C++. 
+
+
+
 
