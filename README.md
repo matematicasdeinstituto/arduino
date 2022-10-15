@@ -947,7 +947,7 @@ milisegundos y te imprima en el monitor serie las horas, minutos y segundos.
 
 
 ### <a name="implementandoHHMMSS2"></a>Implementando la conversión anterior (2)
-El [programa anterior](src/ms2human_v1) es un chorizo: todo el código está en
+El [programa anterior](src/cpp/ms2human_v1) es un chorizo: todo el código está en
 la función `main`. Carece de estructura. Vamos a mejorarlo.
 
 Estamos imprimiendo el tiempo en formato `hh:mm:ss`. Esta función es genérica.
