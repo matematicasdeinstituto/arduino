@@ -65,20 +65,17 @@
     * [Teclado de un órgano](#tecladoOrgano)
 
 * [Programación: midiendo tiempo y tipos de enteros](#programTime)
-    * [Reloj v1](#relojv1)
-    * [Conversión de `ms` a `hh::mm::ss`](#conversionHHMMSS)
-    * [Implementando la conversión anterior (1)](#implementandoHHMMSS1)
-    * [Implementando la conversión anterior (2)](#implementandoHHMMSS2)
+    * [Midiendo tiempo de reacción (1)](#tiempoReaccion1)
+    * [Generando números aleatorios](#funcrandom)
+    * [Midiendo diferencias de tiempo](#proramTime2)
+    * [Midiendo tiempo de reacción (2)](#tiempoReaccion2)
+    * [Clase Cronometro](#claseCronometro)
 
-* [Programación: sobrecarga de funciones](#programOverload)
 ---------
-* [Programación: paso por referencia y por valor](#programPasoReferencia)
-    * [Clase `Tiempo`](#claseTiempo1)
 
 
 
 * [Ejercicios con pulsadores (2)](#ejerConPulsadores2)
-    * [Midiendo tiempo de reacción](#tiempoReaccion)
     * [Semáforo de peatones](#semaforoPeatones)
 
 * [Buzzers](#tst_buzzer)
@@ -105,6 +102,7 @@
 
 * [PWM: controlando la velocidad de un motor DC](#pwmMotorDC)
 
+----
 * [Material](#tagmaterial)
 
 * [Concursos](#tagConcursos)
@@ -815,24 +813,16 @@ pulsadas. Reutiliza la clase `Pulsador` que acabamos de escribir.
 * 7 pulsadores
 * cables
 
-### <a name="tiempoReaccion"></a>Ejercicio: Midiendo tiempo de reacción
-Haz un circuito para medir el tiempo de reacción de una persona. Se puede
-hacer de varias formas: pones 3 leds y que vayan cambiando de color
-alternativamente. De repente se encienden todos: pulsa un botón. Mide el
-tiempo que tarda en reaccionar la persona mostrándolo en el monitor serie.
 
-### Material
-* 3 LEDs 
-* 3 resistencias 1k
-* 1 pulsador
-
-
-## <a name="programTime"></a>Programación: midiendo tiempo
+## <a name="programTime"></a>Programación: midiendo tiempo y tipos de enteros
 Arduino trae incorporada la función `millis` que devuelve el número de
 milisegundos transcurridos desde que se encendió el microcontrolador.
 
 La función `millis` devuelve un `unsigned long`. Este es un nuevo tipo de
 entero.
+
+[Aquí](src/cpp/reloj_v1) puedes encontrar un ejemplo de cómo usar la función
+`millis`. 
 
 ### Tipos de enteros en C++
 En C++ se definen los siguientes tipos básicos de enteros: 
@@ -851,173 +841,125 @@ Además, los enteros pueden ser de dos tipos:
   `signed`.
 * `unsigned`, enteros sin signo.
 
-**Advertencia: los tipos `unsigned` se crearon porque inicialmente los
+**Advertencia**
+
+Los tipos `unsigned` se crearon porque inicialmente los
 ordenadores tenían poca memoria y el rango de valores positivos que admiten es
 mayor que el rango de valores del mismo tipo pero `signed`. Sin embargo,
 generan muchos problemas y dan muchos dolor de cabeza. Hasta tal punto que
 cada vez se oye más el consejo de evitar usarlos (salvo que no se pueda no
 usarlos). Resumiendo: cuando definas un entero por defecto defínelo siempre
-como `int`**
-
-### <a name="relojv1"></a>Ejemplo: Reloj v1
-Usando la función `millis` hagamos un reloj básico. [Aquí](src/cpp/reloj_v1)
-puedes encontrar un primer intento. 
-
-Como puedes ver es un intento fallido ya que estamos dando la hora en
-milisegundos. En lugar de poner `00:01:00` que sería que ha transcurrido 1
-minuto desde que se encendió el microcontrolador ponemos `60000`, lo cual es
-completamente ilegible.
-
-### <a name="conversionHHMMSS"></a>Ejercicio: conversión de `ms` a `hh:mm:ss`
-Modifiquemos la versión 1 del reloj para que muestre la hora como
-`hh:mm:ss`. 
-
-El problema lo podemos descomponer en dos partes:
-1. Dado un tiempo en milisegundos averiguar cuántas horas, minutos y segundos
-   tiene.
-2. Imprimir esos números en formato `hh:mm:ss`. 
-
-La segunda parte debería de ser sencilla. Veamos cómo hacer la primera.
-
-Si quieres programar un ordenador para hacer algo, lo primero que tienes que
-saber es cómo hacerlo tú a mano. Si tu no sabes pasar de milisegundos a horas,
-minutos y segundos va a ser imposible que puedas programar el arduino para que
-lo haga por ti.
-
-Para ello te propongo los siguientes problemas (y sí, son problemas básicos de
-matemáticas; si programas un microcontrolador te vas a encontrar
-sistemáticamente con problemas de este tipo que tienes que saber resolver).
-
-Cuando abordes un problema nuevo intenta empezar siempre con problemas
-sencillos. Por ello, en lugar de usar milisegundos usemos segundos con los que
-estamos más familiarizados:
+como `int`.
 
 
-* A mano (puedes usar una calculadora):
-  1. Calcula los segundos que hay en 2horas 3minutos y 50segundos.
-  2. Descompón 16.525 segundos en horas, minutos y segundos.
+### <a name="tiempoReaccion1"></a>Explicación: Midiendo tiempo de reacción (1)
+Vamos a hacer un circuito para medir el tiempo de reacción de una persona.
 
-Recuerda que lo importante es que te fijes en el método, ya que el método es
-lo que tienes que programar.
+Para ello ponemos a una persona delante de un LED y le damos un interruptor.
+Cuando el LED se encienda, la persona tiene que apretar el interruptor
+midiendo el tiempo que tarda en pulsarlo. Esa es la idea. Por supuesto que se
+podría hacer de muy diferentes formas: suena música y de repente se para;
+tienes que pulsar el pulsador cuando se para la música y medimos el tiempo que
+tardas en hacerlo, ...
 
-### <a name="implementandoHHMMSS1"></a>Implementando la conversión anterior (1)
-Para ver si el método que has dado es correcto escribe un programa que te pida
-el número de milisegundos y te imprima en el monitor serie las horas, minutos
-y segundos.
+Concretemos lo que queremos hacer:
+1. Necesitamos un LED y un pulsador.
+2. El LED está apagado y de repente se enciende (o al revés).
+3. Medimos el tiempo que tarda el usuario desde que apagamos el LED hasta que
+   se enciende de nuevo.
+4. Mostramos en el monitor serie el resultado.
 
-#### Problema 1
-Si recuerdas, cuando aprendimos a leer del monitor serie, 
-usando la función `Serial.read()`, solo podíamos leer carácter a carácter. La
-función `Serial.read()` no lee números!!! Si queremos hacer un programa que
-lea el número de milisegundos, esta función no nos sirve.
-
-Es muy habitual encontrarnos con este tipo de problemas: queremos hacer algo
-(leer un número en este caso) y en principio no sabemos qué hacer. En este
-caso puedes:
-
-1. ¿Arduino suministrará alguna función para leer números? En principio, leer
-   un número parece algo bastante normal, así que debería de suministrar dicha
-   función. Yo buscaría en un motor de búsqueda algo del tipo "arduino serial
-   read number". Observar que lo busco en inglés y no en español.
-
-2. Si no encuentro nada, puedo acudir a foros como el de 
-   [stackoverflow](https://stackoverflow.com/) buscando ayuda. Si quieres
-   encontrar ayuda busca siempre en inglés, nunca en español.
-
-3. Si no encuentro nada siempre puedo recurrir al método tradicional: pensar y
-   escribir yo mismo la función.
-
-En este caso, al buscar la ayuda de arduino he encontrado la siguiente
-función:
-[`Serial.parseInt()`](https://www.arduino.cc/reference/en/language/functions/communication/serial/parseint/)
-que lee un número de tipo `long`. Como ves el nombre está fatal elegido: yo lo
-habría llamado `Serial.read_int()`, o en este caso `Serial.read_long()`.
-Serían nombres más expresivos.
-
-¿Podrías modificar el programa que vimos de lectura de un carácter usando esta
-nueva función `Serial.parseInt()` para que lea números?
-
-[Aquí](src/cpp/serial_read_v3) tienes la solución. Juega con él.
-Prueba a escribir números positivos, negativos y letras a ver qué responde.
-
-### Problema 2
-Una vez que ya sabemos leer números del monitor serie es fácil escribir el
-programa que queríamos: escribe un programa que te pida el número de
-milisegundos y te imprima en el monitor serie las horas, minutos y segundos.
+Las partes 1 y 4 ya deberíamos de saberlas hacer. Es nuevo el apagar
+aleatoriamente el LED y medir el tiempo que tarda. Veamos cómo hacerlo.
 
 
-### <a name="implementandoHHMMSS2"></a>Implementando la conversión anterior (2)
-El [programa anterior](src/cpp/ms2human_v1) es un chorizo: todo el código está en
-la función `main`. Carece de estructura. Vamos a mejorarlo.
+### <a name="funcrandom"></a>Programación: generando números aleatorios
+Arduino trae la función `random` que genera un número de forma aleatoria.
+Siempre que quieras usar una nueva función escribe un programa sencillo para
+aprender a manejarla. Según la
+[ayuda](https://www.arduino.cc/reference/en/language/functions/random-numbers/random/)
+una forma de usar esta función es `long n = random(max);` lo que genera un
+número aleatorio de [0, max).
 
-Estamos imprimiendo el tiempo en formato `hh:mm:ss`. Esta función es genérica.
-Esto quiere decir que esto mismo puede que lo queramos hacer en otro programa.
-Para poder reutilizarla haz lo siguiente:
+[Aquí](src/cpp/random_v1) puedes encontrar un ejemplo básico de cómo usar esta
+función.
 
-1. Crea un archivo de cabecera `tiempo.h` donde definas el prototipo de la
-   función
-   ```
-   void serial_print_time(long h, long min, long seg, long ms);
-   ```
-    
-    El `void` lo que quiere decir es que esta función no devuelve nada. Le
-    pasamos las horas, los minutos, segundos y milisegundos y los imprime en
-    el monitor serie.
+### <a name="programTime2"></a>Programación: midiendo diferencias de tiempo
+Para medir el tiempo transcurrido entre que se apaga el LED y se pulsa el
+interruptor basta con anotar la "hora" a la que apagamos el LED y la "hora" a
+la que se pulsa el interruptor. La diferencia será el tiempo:
 
-2. Implementa la función en el fichero `tiempo.ino`.
-3. Modifica el `main` usando esa función.
-   
-
-## <a name="programOverload"></a>Programación: sobrecarga de funciones
-En C clásico (no soy programador en C, así que desconozco cómo es en C
-moderno) tenías que escribir diferentes funciones para imprimir un objeto
-dependiendo de si el objeto era un `char`, un `int`, un `long`, ...
 ```
-void print_char(char x);    /* imprime un char */
-void print_int (int x);	    /* imprime un int  */
-void print_long(long x);    /* imprime un long */
+// se apaga el LED
+unsigned long t0 = millis();	// t0 = hora a la que se apaga el LED
+...
+// se pulsa el interruptor
+unsigned long t1 = millis();	// t1 = hora a la que se pulsa el interruptor
+
+unsigned long t = t1 - t0;      // tiempo transcurrido
 ```
 
-C++ admite lo que se llama sobrecarga de funciones: podemos usar el mismo
-nombre para distintos tipos. En C++ las funciones anteriores se escribirían
-como:
+[Aquí](src/cpp/millis_v1) puedes encontrar un ejemplo de cómo medir tiempos.
+
+
+
+### <a name="tiempoReaccion2"></a>Ejercicio: Midiendo tiempo de reacción
+Haz un circuito para medir el tiempo de reacción de una persona.
+
+
+### Material
+* 1 LEDs 
+* 1 resistencias 1k
+* 1 pulsador
+
+
+### <a name="claseCronometro"></a>Ejercicio: clase Cronometro
+El programa anterior lo que está haciendo es medir el tiempo que transcurre
+desde que se apaga el LED hasta que se pulsa el pulsador. Si en lugar de
+Arduino lo hicieramos a mano yo tendría un cronómetro en mi mano: cuando se
+apaga el LED lo pongo en marcha, y cuando se pulsa el interruptor lo apago
+mirando el tiempo transcurrido. 
+
+A mi me gustaría que mi programa reflejase esta forma natural de concebir las
+cosas. Quiero que mi programa quede:
 ```
-void print(char x);
-void print(int x);
-void print(long x);
+    Cronometro crono;
+    ... 
+
+    while(true){
+	...
+
+        crono.start();
+        // medimos el tiempo de lo que ejecutemos aquí
+        crono.stop();
+
+        // imprimos mensaje
+        Serial.print(crono.time()); 
+        Serial.println(" ms");
+    }
 ```
 
-Como lo mejor es ver cómo funciona en la práctica, [aquí](src/cpp/overload_v1)
-puedes encontrar un programa que muestra el funcionamiento. Observa que las 3
-funciones anteriores son 3 funciones *distintas*, dependiendo del tipo que le
-pases como parámetro el compilador llama a una u otra función.
+Observar que eso es más legible. 
 
-## <a name="programPasoReferencia"></a>Programación: paso por referencia y por valor
-Explicación:
-* Forma de llamar a una función: pila.
-* Punteros y referencias.
-* Paso por referencia y paso por valor.
-
-### <a name="claseTiempo1"></a>Ejercicio: clase `Tiempo`
-Crea la siguiente clase:
+¿Te atreves a escribir la clase `Cronometro`? Una pista, la clase es:
 ```
-clase Tiempo{
+class Cronometro{
 public:
-// constructor
-    // opción 1: se le pasan los milisegundos. Almacena hh:mm:ss
-    Tiempo(long ms);
+    Cronometro();
+    
+    void start(); 
+    void stop();
 
-    // opción 2: se le pasan directamente las horas, minutos y segundos.
-    Tiempo(long h, long min, long seg);
+    unsigned long time() const;
 
 private:
-    long h_;	// horas
-    long min_;
-    long seg_;
+    unsigned long t0_;	// tiempo en que se enciende
+    unsigned long t1_;  // tiempo en que se apaga
 };
 ```
-e implementa la función `void serial_print(const Tiempo& t)` que imprima el
-tiempo como `hh:mm:ss`.
+
+Implementa tú las funciones.
+
 
 
 ### <a name="semaforoPeatones"></a>Ejercicio: Semáforo de peatones
@@ -1239,9 +1181,8 @@ Para cotillear:
 * [Miniorgano v3](src/cpp/miniorgano_v3)
 * [Miniorgano v4](src/cpp/miniorgano_v4)
 * [Organo_v1](src/cpp/organo_v1)
-* [Conversión de ms a hh:mm:ss v1](src/cpp/ms2human_v1)
-* [Conversión de ms a hh:mm:ss v2](src/cpp/ms2human_v2)
-
+* [Midiendo tiempo de reacción (2)](src/cpp/reaction_time_v1)
+* [Clase Cronometro](src/cpp/reaction_time_v2)
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos
 Al principio decidí subir todos los vídeos a YouTube. Sin embargo, después de
