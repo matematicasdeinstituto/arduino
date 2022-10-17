@@ -62,7 +62,9 @@
     * [Clase pulsador v2](#clasePulsadorv2)
     * [Miniorgano v3](#ejerMiniorgano3)
     * [Miniorgano v4](#ejerMiniorgano4)
-    * [Teclado de un órgano](#tecladoOrgano)
+
+* [Programación: paso por valor y por referencia](#programPasoValorRef)
+    * [Semáforo de peatones](#semaforoPeatones)
 
 * [Programación: midiendo tiempo y tipos de enteros](#programTime)
     * [Midiendo tiempo de reacción (1)](#tiempoReaccion1)
@@ -75,10 +77,8 @@
 
 
 
-* [Ejercicios con pulsadores (2)](#ejerConPulsadores2)
-    * [Semáforo de peatones](#semaforoPeatones)
-
 * [Buzzers](#tst_buzzer)
+    * [Teclado de un órgano](#tecladoOrgano)
     * [Órgano de juguete](#organo)
     * [Sirena](#sirenaBuzzer)
 
@@ -804,15 +804,43 @@ siguientes funciones a la clase pulsador:
 * `bool sigue_soltado();`
 
 
-### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
-Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
-pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
-pulsadas. Reutiliza la clase `Pulsador` que acabamos de escribir.
+## <a name="programPasoValorRef"></a>Programación: paso por valor y por referencia.
 
-#### Material
-* 7 pulsadores
-* cables
+Explicar:
+1. Llamada a una función: copia de argumentos en la pila.
+2. Punteros y referencias.
+3. Paso por valor, y paso por referencia.
 
+
+### <a name="semaforoPeatones"></a>Ejercicio: Semáforo de peatones
+En una calle hay un paso de cebra regulado por un semáforo. El semáforo
+siempre está verde para los coches excepto cuando llega un peaton y pulsa un
+botón, en cuyo caso el semáforo de coches se pone rojo (pasa primero por
+amarillo) y el de peatones se pone verde. Transcurrido un tiempo el semáforo
+de peatones se pone rojo (para avisar al peatón que se va a poner en rojo
+primero parpadea) y el de coche verde.
+
+Crea un circuito donde se vea un semáforo para los coches (3 luces, roja,
+amarilla y verde) y un semáforo para los peatones (2 luces, roja y verde, con
+un pulsador para que aprieten los peatones cuando quieran pasar), y
+prográmalo para controlar el tráfico de una calle.
+
+Para ello:
+1. Escribe una función `void parpadea(LED& led, int n, int t)` que haga que
+   un led parpadee `n` veces. El LED se encenderá `t` milisegundos, 
+   se apagará `t` milisegundos, y así repetidamente `n` veces.
+
+2. Crea dos clases: `Semaforo_coche` y `Semaforo_peaton` para controlar los
+   dos semáforos. De momento no te ayudo, intenta hacerlo tú. Si necesitas
+   ayuda pregunta.
+
+
+### Material
+* 2 LEDs rojos
+* 2 LEDs verdes
+* 1 LED amarillo
+* 5 resistencias 1k
+* 1 pulsador
 
 ## <a name="programTime"></a>Programación: midiendo tiempo y tipos de enteros
 Arduino trae incorporada la función `millis` que devuelve el número de
@@ -962,19 +990,6 @@ Implementa tú las funciones.
 
 
 
-### <a name="semaforoPeatones"></a>Ejercicio: Semáforo de peatones
-En una calle hay un paso de cebra regulado por un semáforo. El semáforo
-siempre está verde para los coches excepto cuando llega un peaton y pulsa un
-botón, en cuyo caso el semáforo de coches se pone rojo (pasa primero por
-amarillo) y el de peatones se pone verde. Transcurrido un tiempo el semáforo
-de peatones se pone rojo y el de coches verde.
-
-### Material
-* 2 LEDs rojos
-* 2 LEDs verdes
-* 1 LED amarillo
-* 5 resistencias 1k
-* 1 pulsador
 
 ## <a name="tst_buzzer"></a>Buzzers
 
@@ -982,6 +997,17 @@ de peatones se pone rojo y el de coches verde.
 2. Para entender bien lo que se está haciendo grabar el sonido emitido por un
    diapasón de 440Hz (La) y mostrarlo en el ordenador usando Audacity.
    ¿Reconoces la forma de la función?
+
+
+### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
+Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
+pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
+pulsadas. Reutiliza la clase `Pulsador` que acabamos de escribir.
+
+#### Material
+* 7 pulsadores
+* cables
+
 
 ### <a name="organo"></a>Ejercicio: Órgano de juguete
 
@@ -1180,9 +1206,10 @@ Para cotillear:
 * [Clase Pulsador](src/cpp/clase_pulsador_v1)
 * [Miniorgano v3](src/cpp/miniorgano_v3)
 * [Miniorgano v4](src/cpp/miniorgano_v4)
-* [Organo_v1](src/cpp/organo_v1)
+* [Semáforo de peatones v1](src/cpp/semaforo_peatones_v1)
 * [Midiendo tiempo de reacción (2)](src/cpp/reaction_time_v1)
 * [Clase Cronometro](src/cpp/reaction_time_v2)
+* [Organo_v1](src/cpp/organo_v1)
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos
 Al principio decidí subir todos los vídeos a YouTube. Sin embargo, después de
