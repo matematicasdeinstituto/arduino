@@ -73,11 +73,14 @@
     * [Midiendo tiempo de reacción (2)](#tiempoReaccion2)
     * [Clase Cronometro](#claseCronometro)
 
+* [Buzzers](#tst_buzzer)
+    * [Ideas básicas de sonido](#basicoSonido)
+    * [Generando 1 señal](#buzzer1senal)
+    * [Escala musical](#buzzerEscala)
 ---------
 
 
 
-* [Buzzers](#tst_buzzer)
     * [Teclado de un órgano](#tecladoOrgano)
     * [Órgano de juguete](#organo)
     * [Sirena](#sirenaBuzzer)
@@ -992,11 +995,37 @@ Implementa tú las funciones.
 
 
 ## <a name="tst_buzzer"></a>Buzzers
+### <a name="basicoSonido"></a>Explicación: Ideas básicas de sonido
 
-1. Generar la nota La al presionar un pulsador. 
-2. Para entender bien lo que se está haciendo grabar el sonido emitido por un
-   diapasón de 440Hz (La) y mostrarlo en el ordenador usando Audacity.
-   ¿Reconoces la forma de la función?
+#### Experimento
+Coge un diapasón y graba con el ordenador el sonido que genera. Con el
+programa Audacity abre el sonido y mira la señal que se ha generado.
+¿Reconoces esa función?
+
+
+### <a name="buzzer1senal"></a>Programación: Generando una señal.
+[Aquí](src/cpp/buzzer_v1) puedes encontrar un programa básico que permite
+generar un sonido de una determinada frecuencia. 
+
+Prueba a poner el dedo encima del buzzer cuando está sonando. ¿Suena diferente
+con el dedo puesto o quitado?
+
+#### Material
+* 1 buzzer
+
+### <a name="buzzerEscala"></a>Ejercicio: Escala musical
+Modifica el programa anterior para que toque la escala musical: do, re, mi,
+fa, sol, la, si. El problema que tienes es averiguar las frecuencias de dicha
+escala. Búscalo en internet.
+
+(Si no quieres buscarlo basta con saber que:
+
+1. Cuando dos notas estan separadas por una octava las frecuencias se 
+   multiplican por dos.
+2. Las frecuencias forman una sucesión geométrica.)
+
+
+
 
 
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
@@ -1210,6 +1239,7 @@ Para cotillear:
 * [Midiendo tiempo de reacción (2)](src/cpp/reaction_time_v1)
 * [Clase Cronometro](src/cpp/reaction_time_v2)
 * [Organo_v1](src/cpp/organo_v1)
+* [Escala musical](src/cpp/buzzer_v2)
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos
 Al principio decidí subir todos los vídeos a YouTube. Sin embargo, después de
