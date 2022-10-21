@@ -77,12 +77,12 @@
     * [Ideas básicas de sonido](#basicoSonido)
     * [Generando 1 señal](#buzzer1senal)
     * [Escala musical](#buzzerEscala)
----------
-
-
-
     * [Teclado de un órgano](#tecladoOrgano)
-    * [Órgano de juguete](#organo)
+    * [Órgano de juguete](#organo1)
+
+---------
+* [Jugando con buzzers](#jugandoBuzzers)
+    * [Tocando una canción](#cancion1)
     * [Sirena](#sirenaBuzzer)
 
 * [Motores de continua](#motoresDC)
@@ -1025,29 +1025,26 @@ escala. Búscalo en internet.
 2. Las frecuencias forman una sucesión geométrica.)
 
 
-
-
-
 ### <a name="tecladoOrgano"></a>Ejercicio: Teclado órgano
 Hacer un teclado de un órgano (teclas Do, Re, Mi...) de tal manera que al
 pulsar cada tecla se muestre en el monitor serial de Arduino las teclas
-pulsadas. Reutiliza la clase `Pulsador` que acabamos de escribir.
+pulsadas. Reutiliza la clase `Pulsador` que ya escribimos.
 
 #### Material
 * 7 pulsadores
 * cables
 
 
-### <a name="organo"></a>Ejercicio: Órgano de juguete
+### <a name="organo1"></a>Ejercicio: Órgano de juguete
 
-Fabricar un organo de juguete: no son más que unos cuantos pulsadores 
-y un buzzer.
+Fabrica un organo de juguete: no son más que unos cuantos pulsadores 
+y un buzzer. 
 
 #### Material
 * 7 pulsadores
 * 1 buzzer
-* Opcional: resistencias de 1k
 * cables
+
 
 ### <a name="sirenaBuzzer"></a>Ejercicio: Sirena
 ¿Puedes hacer que el buzzer emita el sonido de una sirena de policía? ¿o de
@@ -1238,8 +1235,9 @@ Para cotillear:
 * [Semáforo de peatones v1](src/cpp/semaforo_peatones_v1)
 * [Midiendo tiempo de reacción (2)](src/cpp/reaction_time_v1)
 * [Clase Cronometro](src/cpp/reaction_time_v2)
-* [Organo_v1](src/cpp/organo_v1)
 * [Escala musical](src/cpp/buzzer_v2)
+* [Teclado órgano](src/cpp/organo_v1)
+* [Órgano de juguete](src/cpp/organo_v2)
 
 ## <a name="problemasVideos"></a>Problemas a la hora de subir videos
 Al principio decidí subir todos los vídeos a YouTube. Sin embargo, después de

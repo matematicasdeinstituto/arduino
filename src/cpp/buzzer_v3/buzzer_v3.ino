@@ -24,13 +24,15 @@ constexpr int la1   = 440;
 constexpr int laS1  = 466;
 constexpr int si1   = 494;
 
+constexpr int cancion[] = 
+    {re1, 1, 
 
 
 int main()
 {
     init();
 
-    pinMode(pin_buzzer, OUTPUT);   // definimos el pin de salida
+    pinMode(pinMode, OUTPUT);   // definimos el pin de salida
 
     while (true){
         tone(pin_buzzer, do1);  
