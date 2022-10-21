@@ -14,6 +14,6 @@
   Motivos:
     1. Daba por supuesto que los alumnos iban a saber manejarse por la página,
        pero parece ser que algunos desconocen lo que son los links.
-    2. No leen nada. Los programas están comentados explicando cosas, pero los
-       alumnos no los leen.
+    2. No leen nada. Los programas están comentados explicando cosas, pero 
+       no los leen.
 

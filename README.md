@@ -80,8 +80,9 @@
     * [Teclado de un órgano](#tecladoOrgano)
     * [Órgano de juguete](#organo1)
 
----------
 * [Jugando con buzzers](#jugandoBuzzers)
+    * [Clase `Buzzer`](#claseBuzzer1)
+---------
     * [Tocando una canción](#cancion1)
     * [Sirena](#sirenaBuzzer)
 
@@ -1044,6 +1045,18 @@ y un buzzer.
 * 7 pulsadores
 * 1 buzzer
 * cables
+
+## <a name="jugandoBuzzers"></a>Jugando con buzzers
+
+### <a name="claseBuzzer1"></a>Clase `Buzzer` v1
+El objetivo es ver si podemos que el arduino toque alguna canción. 
+
+Lo primero que tenemos que tener es una clase que nos permita tocar las
+distintas notas de un piano. [Esta clase](src/cpp/clase_buzzer_v1) es un
+primer intento. 
+
+Ejecuta el programa probándolo; lee el código para entender cómo funciona y
+piensa si esta clase nos puede resultar útil para tocar una canción.
 
 
 ### <a name="sirenaBuzzer"></a>Ejercicio: Sirena
