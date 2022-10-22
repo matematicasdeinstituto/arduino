@@ -1058,6 +1058,8 @@ primer intento.
 Ejecuta el programa probándolo; lee el código para entender cómo funciona y
 piensa si esta clase nos puede resultar útil para tocar una canción.
 
+#### Material
+* 1 buzzer
 
 ### <a name="sirenaBuzzer"></a>Ejercicio: Sirena
 ¿Puedes hacer que el buzzer emita el sonido de una sirena de policía? ¿o de
@@ -1300,6 +1302,21 @@ recursos (aunque suelen ser para gente que ya sabe programar).
 
 
 ## <a name="porDondeSeguir"></a>¿Por dónde seguir?
+A veces ha sido un poco frustrante escribir los ejemplos de este curso, ya que
+por motivos que desconozco los de Arduino usan una versión antigua del
+compilador (el IDE 2.0 trae la versión 7 de gcc, pero la versión actual del
+compilador es la 11!!! ¿por qué están tan anticuados?). No se pueden usar
+técnicas básicas modernas de programación por culpa de que los de Arduino dan
+la impresión de que no saben mucho de programación (otro ejemplo de que 
+lo que digo es cierto
+es que el IDE te lo descargas y no hay forma de verificar que el programa 
+que te has descargado no ha sido modificado. 
+¿no saben cosas básicas de seguridad?).
+
+Por ello, lo primero que tienes que hacer si quieres aprender a programar
+microcontroladores es olvidarte de Arduino y empezar a programar los micros
+directamente.
+
 Un buen libro para aprender a programar directamente un microcontrolador es el
 de *Make: AVR Programming*, de *Elliot Williams* (ISBN: 978-1-449-35578-4). El
 libro programa en C, con la ventaja de programar directamente el
