@@ -11,6 +11,14 @@
 // En mi ordenador se puede encontrar en el directorio 
 //      'packages/arduino/hardware/avr/1.8.5'
 //
+//
+// TODO: formas de mejorar este programa.
+//      Una canción está definida por el tiempo que se tarda cada semifusa en
+//      ejecutar y la partitura. Yo quiero que eso quede reflejado en el
+//      programa. Quiero escribir cosas del tipo:
+//
+//          toca(buzzer, partitura);
+//
 #include "buzzer_v2.h"
 #include "nota.h"
 

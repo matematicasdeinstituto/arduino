@@ -82,9 +82,7 @@
 
 * [Jugando con buzzers](#jugandoBuzzers)
     * [Clase `Buzzer`](#claseBuzzer1)
----------
     * [Tocando una canción](#cancion1)
-    * [Sirena](#sirenaBuzzer)
 
 * [Motores de continua](#motoresDC)
     * Coche básico: [v1.0](#cocheBasico10)
@@ -1061,14 +1059,16 @@ piensa si esta clase nos puede resultar útil para tocar una canción.
 #### Material
 * 1 buzzer
 
-### <a name="sirenaBuzzer"></a>Ejercicio: Sirena
-¿Puedes hacer que el buzzer emita el sonido de una sirena de policía? ¿o de
-los bomberos? ¿o reproducir la alarma de un despertador?
 
-#### Material
-* 1 buzzer
-* cables
+### <a name="cancion1"></a>Tocando una canción (opcional)
+Si aprendes lo que es un array en C++ podrás hacer un circuito que toque una
+canción.
 
+[Aquí](src/cpp/song_v1) puedes encontrar un ejemplo más elaborado de lo que se
+suele encontrar en internet. Lee los comentarios para compilarlo.
+
+El ejemplo no está acabado. En los comentarios dejo escrito cómo se puede
+mejorar.
 
 ## <a name="motoresDC"></a>Motores de continua
 
