@@ -1,5 +1,11 @@
 # Tutorial básico de Arduino
 
+La mejor forma de hacer este tutorial es descargarlo localmente y abrir el
+fichero `index.html`. De esa forma todo el código lo tendrás localmente y
+podrás ejecutarlo directamente en arduino.
+
+
+## Índice
 * [Introducción](#introduccion)
 
 * [Primeros pasos](#basico)
